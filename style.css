@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
 }
 
 .container {
@@ -12,10 +14,12 @@ body {
     overflow: hidden;
 }
 
+/* Header Styles */
 header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
+    text-align: center;
 }
 
 header h1 {
@@ -40,22 +44,36 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
 section {
     padding: 2rem 0;
 }
 
 h2 {
     margin-top: 0;
+    color: #333;
 }
 
 .project {
     border: 1px solid #ddd;
     padding: 1rem;
     margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 4px;
 }
 
+.project h3 {
+    margin-top: 0;
+}
+
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -63,6 +81,7 @@ form {
 
 form label {
     margin: 0.5rem 0;
+    font-weight: bold;
 }
 
 form input, form textarea {
@@ -79,15 +98,20 @@ form button {
     background: #333;
     color: #fff;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 form button:hover {
     background: #555;
 }
 
+/* Footer Styles */
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
