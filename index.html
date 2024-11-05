@@ -5,15 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kyi's Portfolio</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- External CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Local CSS -->
+  <!-- <link rel="stylesheet" href="/style.css"> -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
     html {
       scroll-behavior: smooth;
     }
   </style>
+
+  <!-- Import custom JavaScript with defer -->
+  <script src="custom.js" defer></script>
 </head>
+
 
 <body class="bg-gray-100 text-gray-800">
 
@@ -64,35 +73,46 @@
   </section>
 
   <!-- Job Experience Section -->
-  <section id="experience" class="py-10">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">My Job Experience</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="experience bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-semibold mb-2">Web Developer</h3>
-          <p class="text-gray-500">Creative Web Studio</p>
-          <p class="text-gray-600 mt-2">
-            Developed website layouts and content formatting with HTML5, CSS3, and DRUPAL. Advised clients
-            on design, created wireframes, and produced technical/user documentation.
-          </p>
+  <section id="experience" class="bg-gray-50 py-10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
+      <div class="relative">
+        <div class="slider">
+          <div class="slide active transition-opacity duration-500 ease-in-out opacity-100">
+            <h3 class="text-2xl font-semibold">E-commerce WordPress Developer</h3>
+            <p class="text-gray-600">TabacFree · Full-time · Dec 2023 - Sep 2024</p>
+            <p class="mt-2">
+              As a WordPress Developer and WooCommerce specialist, I specialize in crafting e-commerce websites using
+              HTML, CSS, JavaScript, and PHP...
+            </p>
+          </div>
+          <div class="slide transition-opacity duration-500 ease-in-out opacity-0">
+            <h3 class="text-2xl font-semibold">Frontend Developer</h3>
+            <p class="text-gray-600">UNICOMI · Full-time · Nov 2021 - Dec 2023</p>
+            <p class="mt-2">
+              I specialize in developing CMS, landing pages, and website layouts using front-end technologies...
+            </p>
+          </div>
+          <div class="slide transition-opacity duration-500 ease-in-out opacity-0">
+            <h3 class="text-2xl font-semibold">Co-Founder & Operations Manager</h3>
+            <p class="text-gray-600">Tine Yin May · Self-employed · May 2020 - Dec 2021</p>
+            <p class="mt-2">
+              As a co-founder, I manage operations including market research and logistics...
+            </p>
+          </div>
+          <!-- Add more slides as needed -->
         </div>
-        <div class="experience bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-semibold mb-2">Project Leader</h3>
-          <p class="text-gray-500">Creative Web Studio</p>
-          <p class="text-gray-600 mt-2">
-            Led a team of 3-4, managed projects, guided junior developers, and collaborated with
-            cross-functional teams to meet client deadlines on e-commerce and other web development
-            projects.
-          </p>
-        </div>
-        <div class="experience bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-xl font-semibold mb-2">Front-End Developer</h3>
-          <p class="text-gray-500">Freelance</p>
-          <p class="text-gray-600 mt-2">
-            Specialized in front-end development using HTML, CSS, and JavaScript. Integrated responsive
-            design and SEO best practices, troubleshooting software bugs to enhance user experience.
-          </p>
-        </div>
+        <!-- Navigation Buttons -->
+        <button
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-l-md hover:bg-gray-700 focus:outline-none"
+          onclick="changeSlide(-1)">
+          &#10094; Prev
+        </button>
+        <button
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-r-md hover:bg-gray-700 focus:outline-none"
+          onclick="changeSlide(1)">
+          Next &#10095;
+        </button>
       </div>
     </div>
   </section>
@@ -138,36 +158,8 @@
   </button>
 
 
-  <script src="scripts.js">
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('contact-form');
-
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        form.reset();
-      });
-    });
-
-    // Get the button
-    const backToTopButton = document.getElementById('backToTop');
-
-    // Show or hide the button based on scroll position
-    window.onscroll = function () {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTopButton.classList.remove('hidden');
-      } else {
-        backToTopButton.classList.add('hidden');
-      }
-    };
-
-    // Scroll smoothly to the top when the button is clicked
-    backToTopButton.onclick = function () {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    };
+  <script>
+    
   </script>
 </body>
 
