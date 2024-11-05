@@ -42,21 +42,21 @@
         <img src="img/image.png" alt="Kyi Phyu Khant"
           class="w-32 h-32 rounded-full border-4 border-white shadow-lg transition-transform duration-300 transform hover:scale-110 z-10">
       </div>
-      <h1 class="text-5xl font-extrabold mb-4 text-shadow">Kyi Phyu Khant@JULY</h1>
-      <p class="text-2xl font-semibold mb-4">Web | Front-End | CMS Developer</p>
-      <nav class="mt-4">
-        <ul class="flex justify-center space-x-6">
+      <h1 class="text-5xl font-extrabold mb-4 text-shadow">Kyi Phyu Khant@JULY</h1> <!-- Increased font size -->
+      <p class="text-2xl font-semibold mb-6">Web | Front-End | CMS Developer</p>
+      <nav class="mt-5 mb-2">
+        <ul class="flex justify-center">
           <li>
             <a href="index.html"
-              class="text-gray-600 hover:bg-pink-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">About</a>
+              class="text-gray-600 bg-gray-200 hover:bg-pink-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">About</a>
           </li>
           <li>
-            <a href="experiences.html"
-              class="text-gray-600 hover:bg-blue-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">Experience</a>
+            <a href="expertise.html"
+              class="text-gray-600 bg-gray-200 hover:bg-blue-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">Expertise</a>
           </li>
           <li>
             <a href="contact.html"
-              class="text-gray-600 hover:bg-yellow-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">Connect</a>
+              class="text-gray-600 bg-gray-200 hover:bg-yellow-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">Connect</a>
           </li>
         </ul>
       </nav>
@@ -64,7 +64,9 @@
 
     <!-- Wavy bottom effect -->
     <svg width="100%" height="80" viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path fill="rgba(249, 250, 251, var(--tw-bg-opacity))" fill-opacity="1" d="M0,128L30,160C60,192,120,256,180,256C240,256,300,192,360,160C420,128,480,128,540,138.7C600,149,660,171,720,192C780,213,840,235,900,224C960,213,1020,171,1080,160C1140,149,1200,171,1260,192C1320,213,1380,235,1410,245L1440,256L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320H0Z"></path>
+      <path fill="rgba(249, 250, 251, var(--tw-bg-opacity))" fill-opacity="1"
+        d="M0,128L30,160C60,192,120,256,180,256C240,256,300,192,360,160C420,128,480,128,540,138.7C600,149,660,171,720,192C780,213,840,235,900,224C960,213,1020,171,1080,160C1140,149,1200,171,1260,192C1320,213,1380,235,1410,245L1440,256L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320H0Z">
+      </path>
     </svg>
   </header>
 
@@ -91,35 +93,75 @@
 
 
   <!-- Job Experience Section -->
-  <!-- <section id="experience" class="bg-gradient-to-r from-blue-500 to-purple-600 py-10">
+  <section id="experience" class="py-10">
+    <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-white text-center mb-8">Experience</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-5 rounded-lg shadow-md transition transform hover:scale-105">
-          <h3 class="text-2xl font-semibold text-blue-600">E-commerce WordPress Developer</h3>
-          <p class="text-gray-600">TabacFree · Full-time · Dec 2023 - Sep 2024</p>
-          <p class="mt-2 text-gray-800">
-            As a WordPress Developer and WooCommerce specialist, I specialize in crafting e-commerce websites using
-            HTML, CSS, JavaScript, and PHP...
-          </p>
-        </div>
-        <div class="bg-white p-5 rounded-lg shadow-md transition transform hover:scale-105">
-          <h3 class="text-2xl font-semibold text-blue-600">Frontend Developer</h3>
-          <p class="text-gray-600">UNICOMI · Full-time · Nov 2021 - Dec 2023</p>
-          <p class="mt-2 text-gray-800">
-            I specialize in developing CMS, landing pages, and website layouts using front-end technologies...
-          </p>
-        </div>
-        <div class="bg-white p-5 rounded-lg shadow-md transition transform hover:scale-105">
-          <h3 class="text-2xl font-semibold text-blue-600">Co-Founder & Operations Manager</h3>
-          <p class="text-gray-600">Tine Yin May · Self-employed · May 2020 - Dec 2021</p>
-          <p class="mt-2 text-gray-800">
-            As a co-founder, I manage operations including market research and logistics...
-          </p>
-        </div>
+      <div class="max-h-80 overflow-y-auto scrollable">
+        <ul class="space-y-4">
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">E-commerce WordPress Developer</h4>
+            <h4 class="text-xl font-semibold text-blue-600">
+              <a href="https://tabacfree.com/" target="_blank" class="hover:underline">TabacFree</a>
+            </h4>
+            <p class="text-gray-600">Full-time · Dec 2023 - Sep 2024</p>
+          </li>
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">Frontend Developer</h4>
+            <h4 class="text-xl font-semibold text-blue-600">
+              <a href="https://www.unicomi.com/" target="_blank" class="hover:underline">UNICOMI</a>
+            </h4>
+            <p class="text-gray-600">Full-time · Nov 2021 - Dec 2023</p>
+          </li>
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">Co-Founder & Operations Manager</h4>
+            <h4 class="text-xl font-semibold text-blue-600">
+              <a href="https://www.facebook.com/TineYinnMay" target="_blank" class="hover:underline">Tine Yin May</a>
+            </h4>
+            <p class="text-gray-600">Self-employed · May 2020 - Dec 2021</p>
+          </li>
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">Back End Developer</h4>
+            <h4 class="text-xl font-semibold text-blue-600">
+              <a href="https://eramyanmar.com/" target="_blank" class="hover:underline">ERA Myanmar</a>
+            </h4>
+            <p class="text-gray-600">Full-time · Dec 2019 - Oct 2021</p>
+          </li>
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">Senior Web Developer</h4>
+            <h4 class="text-xl font-semibold text-blue-600">
+              <a href="https://eramyanmar.com/" target="_blank" class="hover:underline">ERA Myanmar</a>
+            </h4>
+            <p class="text-gray-600">Full-time · Jun 2019 - Dec 2019</p>
+          </li>
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">Career Break</h4>
+            <p class="text-gray-600">Dec 2017 - May 2019</p>
+          </li>
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">PHP Web Developer</h4>
+            <h4 class="text-xl font-semibold text-blue-600">
+              <a href="https://www.etiqa.com.sg/" target="_blank" class="hover:underline">Etiqa Insurance Singapore</a>
+            </h4>
+            <p class="text-gray-600">Contract · May 2017 - Nov 2017</p>
+          </li>
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">Content Management System Developer</h4>
+            <h4 class="text-xl font-semibold text-blue-600">
+              <a href="https://www.nexlabs.co/" target="_blank" class="hover:underline">Nex Co., Ltd.</a>
+            </h4>
+            <p class="text-gray-600">Full-time · Jan 2016 - Feb 2017</p>
+          </li>
+          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
+            <h4 class="text-sm font-semibold text-gray-800">Web Developer</h4>
+            <h4 class="text-xl font-semibold text-blue-600">
+              <a href="https://www.creative-webstudio.com/" target="_blank" class="hover:underline">CREATiVe Web Studio</a>
+            </h4>
+            <p class="text-gray-600">Full-time · Jun 2012 - Nov 2015</p>
+          </li>
+        </ul>
       </div>
     </div>
-  </section> -->
+  </section>
 
 
 

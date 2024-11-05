@@ -169,6 +169,49 @@ footer {
     right: 10px;
 }
 
+.accordion-button {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e0e7ff;
+    /* A light blue when expanded */
+    color: #1d4ed8;
+    /* Dark blue text */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.scrollable::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background: transparent;
+    /* Background of the scrollbar track */
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #7e22ce, #ec4899, #f43f5e);
+    /* Gradient for the scrollbar thumb */
+    border-radius: 10px;
+    /* Optional: rounding the corners */
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, #6b21a8, #d63d75, #f43f5e);
+    /* Darker gradient on hover */
+}
+
+/* For Firefox */
+.scrollable {
+    scrollbar-width: thin;
+    /* Thin scrollbar */
+    scrollbar-color: #7e22ce #ffffff;
+    /* Thumb color and track color */
+}
+
 
 
 /* Skills  */
@@ -277,6 +320,78 @@ footer {
 
 .animate-slide-in:nth-child(18) {
     animation-delay: 1.8s;
+}
+
+.icon-html {
+    color: #E34F26;
+}
+
+.icon-js {
+    color: #F7DF1E;
+}
+
+.icon-php {
+    color: #4F5B93;
+}
+
+.icon-mysql {
+    color: #4479A1;
+}
+
+.icon-laravel {
+    color: #FF2D55;
+}
+
+.icon-drupal {
+    color: #007C92;
+}
+
+.icon-wordpress {
+    color: #21759B;
+}
+
+.icon-bootstrap {
+    color: #563D7C;
+}
+
+.icon-tailwind {
+    color: #1572B6;
+}
+
+.icon-react {
+    color: #61DAFB;
+}
+
+.icon-responsive {
+    color: #000;
+}
+
+.icon-google {
+    color: #E04E39;
+}
+
+.icon-photoshop {
+    color: #F3000F;
+}
+
+.icon-office {
+    color: #0078D4;
+}
+
+.icon-git {
+    color: #F1502F;
+}
+
+.icon-vscode {
+    color: #F1502F;
+}
+
+.icon-cpanel {
+    color: #007D5B;
+}
+
+.icon-pencil {
+    color: #C89D58;
 }
 
 /* src/index.css or your custom CSS file */
