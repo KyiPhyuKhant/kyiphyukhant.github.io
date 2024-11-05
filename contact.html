@@ -4,14 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyi's Portfolio</title>
+  <title>Kyi's Portfolio | Web Developer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Kyi Phyu Khant's portfolio showcasing over 8 years of experience as a web developer with skills in HTML5, CSS3, JavaScript, PHP, MySQL, WordPress, and more. Explore Kyi's projects, skills, and expertise in custom web solutions.">
+  <meta name="keywords"
+    content="Kyi Phyu Khant, web developer, portfolio, HTML5, CSS3, JavaScript, PHP, WordPress, MySQL, responsive design, front-end developer, back-end developer, SEO">
+  <meta name="author" content="Kyi Phyu Khant">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Kyi's Portfolio | Web Developer">
+  <meta property="og:description"
+    content="Explore Kyi Phyu Khant's web developer portfolio, highlighting expertise in front-end and back-end development, custom web solutions, and responsive design.">
+  <meta property="og:image" content="img/image.png">
+  <meta property="og:url" content="https://kyiphyukhant.github.io/"> <!-- Update to your portfolio URL -->
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kyi's Portfolio | Web Developer">
+  <meta name="twitter:description"
+    content="Showcasing over 8 years of experience in web development, Kyi's portfolio covers projects, skills, and a dedication to custom web solutions.">
+  <meta name="twitter:image" content="img/image.png">
 
   <!-- External CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Local CSS -->
-  <!-- <link rel="stylesheet" href="/style.css"> -->
   <link rel="stylesheet" href="style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -97,7 +118,7 @@
           <img src="https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white"
             alt="Stack Overflow" class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
         </a>
-        <a href="https://kyiphyukhant.github.io/" target="_blank" rel="nofollow">
+        <a href="https://github.com/KyiPhyuKhant" target="_blank" rel="nofollow">
           <img src="https://img.shields.io/badge/GitHub%20Pages-100000?logo=github&logoColor=white" alt="GitHub Pages"
             class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
         </a>
@@ -126,9 +147,31 @@
 
   <footer class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-8">
     <div class="container mx-auto px-6 text-center">
-      <p class="text-lg font-semibold">&copy; 2024 Kyi Phyu Khant. All rights reserved.</p>
+      <p class="text-lg font-semibold">&copy; <span id="year">2024</span> Kyi Phyu Khant. All rights reserved.</p>
     </div>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kyi Phyu Khant",
+        "jobTitle": "Web Developer",
+        "url": "https://kyiphyukhant.github.io/",
+        "sameAs": [
+          "https://x.com/kyiphyukhant",
+          "https://www.instagram.com/kyi_phyu_khant/",
+          "https://www.linkedin.com/in/kyiphyu-khant"
+        ]
+      }
+    </script>
+
+    <!-- Update Year Automatically -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </footer>
+
 
 
 
