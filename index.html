@@ -8,14 +8,21 @@
 
   <!-- External CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Local CSS -->
   <!-- <link rel="stylesheet" href="/style.css"> -->
   <link rel="stylesheet" href="style.css">
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     html {
       scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
     }
   </style>
 
@@ -27,25 +34,41 @@
 <body class="bg-gray-100 text-gray-800">
 
   <!-- Header Section -->
-  <header class="bg-blue-600 text-white py-6">
+  <header class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-12">
+    <!-- Gradient background -->
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold mb-2">Kyi Phyu Khant</h1>
-      <p class="text-xl">Web | Front-End | CMS Developer</p>
+      <img src="img/image.png" alt="Kyi Phyu Khant" class="w-32 h-32 rounded-full mx-auto mb-4">
+      <h1 class="text-5xl font-extrabold mb-4 text-shadow">Kyi Phyu Khant@JULY</h1> <!-- Increased font size -->
+      <p class="text-2xl font-semibold mb-4">Web | Front-End | CMS Developer</p>
       <nav class="mt-4">
         <ul class="flex justify-center space-x-6">
-          <li><a href="#about" class="hover:underline">About</a></li>
-          <li><a href="#experience" class="hover:underline">Experience</a></li>
-          <li><a href="#social" class="hover:underline">Connect</a></li>
+          <li>
+            <a href="#about"
+              class="text-gray-600 hover:bg-pink-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">About</a>
+          </li>
+          <li>
+            <a href="#experience"
+              class="text-gray-600 hover:bg-blue-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">Experience</a>
+          </li>
+          <li>
+            <a href="#contact"
+              class="text-gray-600 hover:bg-yellow-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">Connect</a>
+          </li>
+          <li>
+            <a href="#social"
+              class="text-gray-600 hover:bg-green-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">Social</a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
+
   <!-- About Me Section -->
   <section id="about" class="py-10 bg-gray-50">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-6">About Me</h2>
-      <p class="text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto">
+      <p class="text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto mb-4">
         Hello! I'm Kyi, an experienced Web Developer with over 8 years in the industry and a Bachelor's degree
         in Information Technology. I’m skilled in front-end technologies and have additional certifications that
         complement my development expertise. Passionate about creating custom solutions and managing client
@@ -53,114 +76,127 @@
         to learn, willing to relocate, and excited to take on new challenges to leverage my skills and
         experience.
       </p>
-    </div>
-  </section>
-
-
-  <!-- Social Media Section -->
-  <section id="social" class="py-10 bg-blue-50">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-6">Connect with Me</h2>
-      <ul class="flex justify-center space-x-6">
-        <li><a href="https://x.com/kyiphyukhant" target="_blank"
-            class="text-blue-600 hover:text-blue-800 font-medium">Twitter</a></li>
-        <li><a href="https://www.instagram.com/kyi_phyu_khant/" target="_blank"
-            class="text-pink-600 hover:text-pink-800 font-medium">Instagram</a></li>
-        <li><a href="https://www.youtube.com/@julykhant/" target="_blank"
-            class="text-red-600 hover:text-red-800 font-medium">YouTube</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Job Experience Section -->
-  <section id="experience" class="bg-gray-50 py-10">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
-      <div class="relative">
-        <div class="slider">
-          <div class="slide active transition-opacity duration-500 ease-in-out opacity-100">
-            <h3 class="text-2xl font-semibold">E-commerce WordPress Developer</h3>
-            <p class="text-gray-600">TabacFree · Full-time · Dec 2023 - Sep 2024</p>
-            <p class="mt-2">
-              As a WordPress Developer and WooCommerce specialist, I specialize in crafting e-commerce websites using
-              HTML, CSS, JavaScript, and PHP...
-            </p>
-          </div>
-          <div class="slide transition-opacity duration-500 ease-in-out opacity-0">
-            <h3 class="text-2xl font-semibold">Frontend Developer</h3>
-            <p class="text-gray-600">UNICOMI · Full-time · Nov 2021 - Dec 2023</p>
-            <p class="mt-2">
-              I specialize in developing CMS, landing pages, and website layouts using front-end technologies...
-            </p>
-          </div>
-          <div class="slide transition-opacity duration-500 ease-in-out opacity-0">
-            <h3 class="text-2xl font-semibold">Co-Founder & Operations Manager</h3>
-            <p class="text-gray-600">Tine Yin May · Self-employed · May 2020 - Dec 2021</p>
-            <p class="mt-2">
-              As a co-founder, I manage operations including market research and logistics...
-            </p>
-          </div>
-          <!-- Add more slides as needed -->
-        </div>
-        <!-- Navigation Buttons -->
-        <button
-          class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-l-md hover:bg-gray-700 focus:outline-none"
-          onclick="changeSlide(-1)">
-          &#10094; Prev
-        </button>
-        <button
-          class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-r-md hover:bg-gray-700 focus:outline-none"
-          onclick="changeSlide(1)">
-          Next &#10095;
-        </button>
+      <div class="text-center">
+        <a href="path/to/your/resume.pdf" download="Kyi_Phyu_Khant_Resume.pdf"
+          class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200">
+          View My Resume
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-10 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
-      <form id="contact-form" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <div class="mb-4">
-          <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
-          <input type="text" id="name" name="name" required
-            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-            placeholder="Your Name">
+
+  <!-- Job Experience Section -->
+  <section id="experience" class="bg-gradient-to-r from-blue-500 to-purple-600 py-10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-white text-center mb-8">Experience</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-5 rounded-lg shadow-md transition transform hover:scale-105">
+          <h3 class="text-2xl font-semibold text-blue-600">E-commerce WordPress Developer</h3>
+          <p class="text-gray-600">TabacFree · Full-time · Dec 2023 - Sep 2024</p>
+          <p class="mt-2 text-gray-800">
+            As a WordPress Developer and WooCommerce specialist, I specialize in crafting e-commerce websites using
+            HTML, CSS, JavaScript, and PHP...
+          </p>
         </div>
-        <div class="mb-4">
-          <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
-          <input type="email" id="email" name="email" required
-            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-            placeholder="Your Email">
+        <div class="bg-white p-5 rounded-lg shadow-md transition transform hover:scale-105">
+          <h3 class="text-2xl font-semibold text-blue-600">Frontend Developer</h3>
+          <p class="text-gray-600">UNICOMI · Full-time · Nov 2021 - Dec 2023</p>
+          <p class="mt-2 text-gray-800">
+            I specialize in developing CMS, landing pages, and website layouts using front-end technologies...
+          </p>
         </div>
-        <div class="mb-4">
-          <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
-          <textarea id="message" name="message" rows="4" required
-            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-            placeholder="Your Message"></textarea>
+        <div class="bg-white p-5 rounded-lg shadow-md transition transform hover:scale-105">
+          <h3 class="text-2xl font-semibold text-blue-600">Co-Founder & Operations Manager</h3>
+          <p class="text-gray-600">Tine Yin May · Self-employed · May 2020 - Dec 2021</p>
+          <p class="mt-2 text-gray-800">
+            As a co-founder, I manage operations including market research and logistics...
+          </p>
         </div>
-        <button type="submit"
-          class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200">Send</button>
-      </form>
+        <!-- Add more experience cards as needed -->
+      </div>
     </div>
   </section>
 
 
-  <footer class="bg-gray-800 text-white py-4">
+  <section id="contact" class="py-10 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+        <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+        <p class="mb-2"><strong><i class="fas fa-envelope"></i>Email:</strong> <a href="mailto:kp.khantkhant@gmail.com"
+            class="text-gray-800 hover:underline">kp.khantkhant@gmail.com</a></p>
+        <p class="mb-2"><strong><i class="fas fa-phone-alt"></i> Phone:</strong> <a href="tel:+660842720844"
+            class="text-gray-800 hover:underline">+66
+            0842720844</a></p>
+        <p class="text-gray-700">If you have any questions or want to discuss a project, feel free to reach out!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Section -->
+  <section id="social" class="bg-gray-50 py-10">
     <div class="container mx-auto px-6 text-center">
-      <p class="text-sm">&copy; 2024 Kyi Phyu Khant. All rights reserved.</p>
+      <h2 class="text-3xl font-bold mb-4">Connect with Me</h2>
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="https://linkedin.com/in/kyiphyu-khant" target="_blank" rel="nofollow">
+          <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"
+           
+            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
+        </a>
+        <a href="https://stackoverflow.com/users/9482702" target="_blank" rel="nofollow">
+          <img src="https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white"
+            alt="Stack Overflow"
+            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
+        </a>
+        <a href="https://kyiphyukhant.github.io/" target="_blank" rel="nofollow">
+          <img src="https://img.shields.io/badge/GitHub%20Pages-100000?logo=github&logoColor=white" alt="GitHub Pages"
+           
+            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
+        </a>
+        <a href="https://x.com/kyiphyukhant" target="_blank" rel="nofollow">
+          <img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=twitter&logoColor=white" alt="Twitter"
+           
+            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
+        </a>
+        <a href="https://www.facebook.com/JeVeuxJusteEtreLibre" target="_blank" rel="nofollow">
+          <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?logo=facebook&logoColor=white" alt="Facebook"
+           
+            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
+        </a>
+        <a href="https://www.instagram.com/kyi_phyu_khant/" target="_blank" rel="nofollow">
+          <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=instagram&logoColor=white" alt="Instagram"
+           
+            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
+        </a>
+        <a href="https://www.youtube.com/@julykhant/" target="_blank" rel="nofollow">
+          <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=youtube&logoColor=white" alt="YouTube"
+           
+            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
+        </a>
+      </div>
+      <p class="text-sm">Follow me on social media for updates!</p>
+    </div>
+  </section>
+
+
+
+  <footer class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-lg font-semibold mb-4">&copy; 2024 Kyi Phyu Khant. All rights reserved.</p>
+      <p class="text-sm">Follow me on social media for updates!</p>
     </div>
   </footer>
+
+
+
+
 
   <button id="backToTop"
     class="fixed bottom-10 right-10 bg-blue-600 text-white rounded-full p-3 shadow-lg transition-transform transform hover:scale-105 hidden">
     ↑
   </button>
 
-
-  <script>
-    
-  </script>
 </body>
 
 </html>
