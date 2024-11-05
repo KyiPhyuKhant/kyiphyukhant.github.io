@@ -8,18 +8,25 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
-<body>
-  <header>
-    <div class="container">
-      <h1>Kyi Phyu Khant</h1>
-      <p>Web|Front-End|CMS Developer</p>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header Section -->
+  <header class="bg-blue-600 text-white py-6">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl font-bold mb-2">Kyi Phyu Khant</h1>
+      <p class="text-xl">Web | Front-End | CMS Developer</p>
+      <nav class="mt-4">
+        <ul class="flex justify-center space-x-6">
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#experience" class="hover:underline">Experience</a></li>
+          <li><a href="#social" class="hover:underline">Connect</a></li>
         </ul>
       </nav>
     </div>
@@ -90,29 +97,46 @@
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send</button>
+  <section id="contact" class="py-10 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
+      <form id="contact-form" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+          <input type="text" id="name" name="name" required
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
+            placeholder="Your Name">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+          <input type="email" id="email" name="email" required
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
+            placeholder="Your Email">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium text-gray-700">Message:</label>
+          <textarea id="message" name="message" rows="4" required
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
+            placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200">Send</button>
       </form>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 John Doe. All rights reserved.</p>
+
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-sm">&copy; 2024 Kyi Phyu Khant. All rights reserved.</p>
     </div>
   </footer>
+
+  <button id="backToTop"
+    class="fixed bottom-10 right-10 bg-blue-600 text-white rounded-full p-3 shadow-lg transition-transform transform hover:scale-105 hidden">
+    ↑
+  </button>
+
 
   <script src="scripts.js">
     document.addEventListener('DOMContentLoaded', () => {
@@ -124,6 +148,26 @@
         form.reset();
       });
     });
+
+    // Get the button
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Show or hide the button based on scroll position
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.classList.remove('hidden');
+      } else {
+        backToTopButton.classList.add('hidden');
+      }
+    };
+
+    // Scroll smoothly to the top when the button is clicked
+    backToTopButton.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    };
   </script>
 </body>
 
