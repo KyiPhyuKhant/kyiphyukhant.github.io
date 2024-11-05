@@ -34,20 +34,24 @@
 <body class="bg-gray-100 text-gray-800">
 
   <!-- Header Section -->
-  <header class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-12">
+  <header class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white pt-12">
     <!-- Gradient background -->
     <div class="container mx-auto px-6 text-center">
-      <img src="img/image.png" alt="Kyi Phyu Khant" class="w-32 h-32 rounded-full mx-auto mb-4">
-      <h1 class="text-5xl font-extrabold mb-4 text-shadow">Kyi Phyu Khant@JULY</h1> <!-- Increased font size -->
+      <div class="relative w-32 h-32 mx-auto my-4">
+        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-red-500"></div>
+        <img src="img/image.png" alt="Kyi Phyu Khant"
+          class="w-32 h-32 rounded-full border-4 border-white shadow-lg transition-transform duration-300 transform hover:scale-110 z-10">
+      </div>
+      <h1 class="text-5xl font-extrabold mb-4 text-shadow">Kyi Phyu Khant@JULY</h1>
       <p class="text-2xl font-semibold mb-4">Web | Front-End | CMS Developer</p>
       <nav class="mt-4">
         <ul class="flex justify-center space-x-6">
           <li>
-            <a href="#about"
+            <a href="index.html"
               class="text-gray-600 hover:bg-pink-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">About</a>
           </li>
           <li>
-            <a href="#skills"
+            <a href="experiences.html"
               class="text-gray-600 hover:bg-blue-200 hover:text-pink-600 rounded-lg px-3 py-1 transition duration-300">Experience</a>
           </li>
           <li>
@@ -57,81 +61,34 @@
         </ul>
       </nav>
     </div>
+
+    <!-- Wavy bottom effect -->
+    <svg width="100%" height="80" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="rgba(249, 250, 251, var(--tw-bg-opacity))" fill-opacity="1" d="M0,128L30,160C60,192,120,256,180,256C240,256,300,192,360,160C420,128,480,128,540,138.7C600,149,660,171,720,192C780,213,840,235,900,224C960,213,1020,171,1080,160C1140,149,1200,171,1260,192C1320,213,1380,235,1410,245L1440,256L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320H0Z"></path>
+    </svg>
   </header>
 
 
+
   <!-- About Me Section -->
-  <section id="about" class="py-10 bg-gray-50">
-    <div class="container mx-auto px-6 text-center">
+  <section id="about" class="relative py-10 bg-gray-50">
+
+    <div class="container mx-auto px-6 text-center relative z-10">
       <h2 class="text-3xl font-bold mb-6">About Me</h2>
       <p class="text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto mb-4">
-        I'm Kyi, a Web Developer with over 8 years of experience and a Bachelor's degree in Information Technology. I’m passionate about web development and continuously learning about the latest technologies. In my spare time, I study more about web development, watch TV Sitcoms, and explore around Bangkok.
+        I'm Kyi, a Web Developer with over 8 years of experience and a Bachelor's degree in Information Technology. I’m
+        passionate about web development and continuously learning about the latest technologies. In my spare time, I
+        study more about web development, watch TV sitcoms, and explore around Bangkok.
       </p>
       <div class="text-center">
         <a href="https://github.com/KyiPhyuKhant/kyiphyukhant.github.io/raw/main/img/my-resume.pdf" target="_blank"
-          class="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200">
+          class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200">
           View My Resume
         </a>
       </div>
-
     </div>
   </section>
 
-  <section id="skills" class="py-10 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-6">My Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">HTML5 & CSS3</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">jQuery / JavaScript</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">PHP</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">MySQL</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">Laravel</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">Drupal</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">WordPress</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">Bootstrap</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">Responsive UI</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">Google Web Designer</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">Adobe Photoshop</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">Microsoft Office</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">GIT</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">VS Code</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">cPanel</h3>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow-md">
-          <h3 class="font-semibold">Pencil</h3>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Job Experience Section -->
   <!-- <section id="experience" class="bg-gradient-to-r from-blue-500 to-purple-600 py-10">
@@ -165,11 +122,10 @@
   </section> -->
 
 
-  
-  <footer class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-8">
+
+  <footer class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-8">
     <div class="container mx-auto px-6 text-center">
-      <p class="text-lg font-semibold mb-4">&copy; 2024 Kyi Phyu Khant. All rights reserved.</p>
-      <p class="text-sm">Follow me on social media for updates!</p>
+      <p class="text-lg font-semibold">&copy; 2024 Kyi Phyu Khant. All rights reserved.</p>
     </div>
   </footer>
 
