@@ -56,3 +56,11 @@ backToTopButton.onclick = function () {
 // setInterval(() => {
 //   changeSlide(1);
 // }, 5000); // Automatically change slides every 5 seconds
+
+// Get the visitor count from local storage
+let count = localStorage.getItem('visitCount');
+count = count ? parseInt(count) + 1 : 1;
+localStorage.setItem('visitCount', count);
+
+// Display the visitor count
+document.getElementById('visitor-counter').textContent = count;
