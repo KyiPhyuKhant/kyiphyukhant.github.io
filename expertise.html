@@ -52,187 +52,66 @@
 </head>
 
 
-<body class="bg-gray-100 text-gray-800">
+<body class="home-page sub-page expertise-page">
+  <div class="space-scene" aria-hidden="true">
+    <span class="star-layer star-layer-one"></span>
+    <span class="star-layer star-layer-two"></span>
+    <span class="orbit-ring orbit-one"></span>
+    <span class="orbit-ring orbit-two"></span>
+    <span class="cursor-light"></span>
+  </div>
 
-  <!-- Header Section -->
-   <header class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white pt-12">
-    <!-- Gradient background -->
-    <div class="container mx-auto px-6 text-center">
-      <div class="relative w-32 h-32 mx-auto my-4">
-        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-red-500"></div>
-        <img src="img/KyiPhyuKhant.jpg" alt="Kyi Phyu Khant"
-          class="w-32 h-32 rounded-full border-4 border-white shadow-lg transition-transform duration-300 transform hover:scale-110 z-10">
-      </div>
-      
-      <!-- Name and Title with better spacing -->
-      <h1 class="text-6xl font-extrabold mb-3 tracking-tight drop-shadow-lg">
-        Kyi Phyu Khant
-      </h1>
-      <div class="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-        <p class="text-xl font-medium tracking-wide">Web | Front-End | CMS Developer</p>
-      </div>
-      
-      <!-- Enhanced Navigation -->
-      <nav class="mt-6 mb-4">
-        <ul class="flex justify-center gap-3 flex-wrap">
-          <li>
-            <a href="index.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-user mr-2"></i>About
-            </a>
-          </li>
-          <li>
-            <a href="expertise.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-code mr-2"></i>Expertise
-            </a>
-          </li>
-          <li>
-            <a href="contact.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-envelope mr-2"></i>Connect
-            </a>
-          </li>
-        </ul>
-      </nav>
+  <header class="subpage-hero">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="brand-mark" href="index.html">KPK</a>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-user"></i>About</a></li>
+        <li><a class="active" href="expertise.html"><i class="fas fa-code"></i>Expertise</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i>Connect</a></li>
+      </ul>
+    </nav>
+    <div class="subpage-copy">
+      <p class="eyebrow">Mission toolkit</p>
+      <h1>Expertise</h1>
+      <p>Technologies and tools I use to design, build, maintain, and ship responsive web experiences.</p>
     </div>
-
-    <!-- Enhanced Wavy bottom effect -->
-    <!-- <svg width="100%" height="80" viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path fill="rgba(249, 250, 251, var(--tw-bg-opacity))" fill-opacity="1"
-        d="M0,128L30,160C60,192,120,256,180,256C240,256,300,192,360,160C420,128,480,128,540,138.7C600,149,660,171,720,192C780,213,840,235,900,224C960,213,1020,171,1080,160C1140,149,1200,171,1260,192C1320,213,1380,235,1410,245L1440,256L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320H0Z">
-      </path>
-    </svg> -->
   </header>
 
-
-  <section id="skills" class="py-10 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-4 animate-fade-in">My Skills</h2>
-      <p class="text-center text-lg mb-8 animate-fade-in">
-        I have a diverse set of skills honed over my 8+ years of experience.
-        Each of these technologies has empowered me to build efficient,
-        user-friendly web applications and websites.
-      </p>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-code mb-2" style="color: #E34F26;"></i>
-          <h3 class="font-semibold text-center">HTML5 & CSS3</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-code-branch mb-2" style="color: #F7DF1E;"></i>
-          <h3 class="font-semibold text-center">jQuery / JavaScript</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fab fa-bootstrap mb-2" style="color: #563D7C;"></i>
-          <h3 class="font-semibold text-center">Bootstrap</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-desktop mb-2" style="color: #000;"></i>
-          <h3 class="font-semibold text-center">Responsive UI</h3>
-        </div>
-
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-cogs mb-2" style="color: #007C92;"></i>
-          <h3 class="font-semibold text-center">Drupal</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fab fa-wordpress mb-2" style="color: #21759B;"></i>
-          <h3 class="font-semibold text-center">WordPress</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-shopping-cart mb-2" style="color: #00B2A9;"></i>
-          <h3 class="font-semibold text-center">ZenCart</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fab fa-jira mb-2" style="color: #0052CC;"></i>
-          <h3 class="font-semibold text-center">Jira</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-code mb-2" style="color: #4F5B93;"></i>
-          <h3 class="font-semibold text-center">PHP</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-database mb-2" style="color: #4479A1;"></i>
-          <h3 class="font-semibold text-center">MySQL</h3>
-        </div>
-        <!-- <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-clipboard-list mb-2" style="color: #FF2D55;"></i>
-          <h3 class="font-semibold text-center">Laravel</h3>
-        </div> -->
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fab fa-css3-alt mb-2" style="color: #1572B6;"></i>
-          <h3 class="font-semibold text-center">Tailwind CSS</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fab fa-react mb-2" style="color: #61DAFB;"></i>
-          <h3 class="font-semibold text-center">React</h3>
-        </div>
-
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-paint-brush mb-2" style="color: #E04E39;"></i>
-          <h3 class="font-semibold text-center">Google Web Designer</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-image mb-2" style="color: #F3000F;"></i>
-          <h3 class="font-semibold text-center">Adobe Photoshop</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-file-alt mb-2" style="color: #0078D4;"></i>
-          <h3 class="font-semibold text-center">Microsoft Office</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fab fa-git-alt mb-2" style="color: #F1502F;"></i>
-          <h3 class="font-semibold text-center">GIT</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-code-branch mb-2" style="color: #F1502F;"></i>
-          <h3 class="font-semibold text-center">VS Code</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-server mb-2" style="color: #007D5B;"></i>
-          <h3 class="font-semibold text-center">cPanel</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fas fa-pencil-alt mb-2" style="color: #C89D58;"></i>
-          <h3 class="font-semibold text-center">Pencil</h3>
-        </div>
-        <div
-          class="bg-white p-4 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animate-slide-in flex flex-col items-center">
-          <i class="fab fa-google mb-2" style="color: #4285F4;"></i>
-          <h3 class="font-semibold text-center">Google Services</h3>
-        </div>
+  <main>
+    <section id="skills" class="home-section skills-section">
+      <div class="section-heading">
+        <p class="eyebrow">Core Systems</p>
+        <h2>Front-end, CMS, e-commerce, and operations skills.</h2>
       </div>
-    </div>
-  </section>
+      <div class="skills-grid">
+        <article class="skill-card"><i class="fas fa-code"></i><h3>HTML5 & CSS3</h3></article>
+        <article class="skill-card"><i class="fas fa-code-branch"></i><h3>jQuery / JavaScript</h3></article>
+        <article class="skill-card"><i class="fab fa-bootstrap"></i><h3>Bootstrap</h3></article>
+        <article class="skill-card"><i class="fas fa-desktop"></i><h3>Responsive UI</h3></article>
+        <article class="skill-card"><i class="fas fa-cogs"></i><h3>Drupal</h3></article>
+        <article class="skill-card"><i class="fab fa-wordpress"></i><h3>WordPress</h3></article>
+        <article class="skill-card"><i class="fas fa-shopping-cart"></i><h3>ZenCart</h3></article>
+        <article class="skill-card"><i class="fab fa-jira"></i><h3>Jira</h3></article>
+        <article class="skill-card"><i class="fas fa-code"></i><h3>PHP</h3></article>
+        <article class="skill-card"><i class="fas fa-database"></i><h3>MySQL</h3></article>
+        <article class="skill-card"><i class="fab fa-css3-alt"></i><h3>Tailwind CSS</h3></article>
+        <article class="skill-card"><i class="fab fa-react"></i><h3>React</h3></article>
+        <article class="skill-card"><i class="fas fa-paint-brush"></i><h3>Google Web Designer</h3></article>
+        <article class="skill-card"><i class="fas fa-image"></i><h3>Adobe Photoshop</h3></article>
+        <article class="skill-card"><i class="fas fa-file-alt"></i><h3>Microsoft Office</h3></article>
+        <article class="skill-card"><i class="fab fa-git-alt"></i><h3>GIT</h3></article>
+        <article class="skill-card"><i class="fas fa-code-branch"></i><h3>VS Code</h3></article>
+        <article class="skill-card"><i class="fas fa-server"></i><h3>cPanel</h3></article>
+        <article class="skill-card"><i class="fas fa-pencil-alt"></i><h3>Pencil</h3></article>
+        <article class="skill-card"><i class="fab fa-google"></i><h3>Google Services</h3></article>
+      </div>
+    </section>
+  </main>
 
-
-
-
-  <footer class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-5">
+  <footer class="home-footer">
     <div class="container mx-auto px-6 text-center">
       <p class="text-xs font-light mb-4">&copy; <span id="year">2024</span> Kyi Phyu Khant. All rights reserved.</p>
-      <p class="text-xs font-light">Visitor Count: <span id="visitor-counter">0</span>
+      <p class="text-xs font-light">Visitor Count: <span id="visitor-counter">0</span></p>
     </div>
 
     <!-- Structured Data -->

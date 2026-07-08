@@ -52,173 +52,156 @@
 </head>
 
 
-<body class="bg-gray-100 text-gray-800">
+<body class="home-page">
+  <div class="space-scene" aria-hidden="true">
+    <span class="star-layer star-layer-one"></span>
+    <span class="star-layer star-layer-two"></span>
+    <span class="orbit-ring orbit-one"></span>
+    <span class="orbit-ring orbit-two"></span>
+    <span class="cursor-light"></span>
+  </div>
 
   <!-- Header Section -->
-  <header class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white pt-12">
-    <!-- Gradient background -->
-    <div class="container mx-auto px-6 text-center">
-      <div class="relative w-32 h-32 mx-auto my-4">
-        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-red-500"></div>
-        <img src="img/KyiPhyuKhant.jpg" alt="Kyi Phyu Khant"
-          class="w-32 h-32 rounded-full border-4 border-white shadow-lg transition-transform duration-300 transform hover:scale-110 z-10">
+  <header class="home-hero">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="brand-mark" href="index.html">KPK</a>
+      <ul>
+        <li><a class="active" href="index.html"><i class="fas fa-user"></i>About</a></li>
+        <li><a href="expertise.html"><i class="fas fa-code"></i>Expertise</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i>Connect</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Currently living in Tokyo</p>
+        <h1>Kyi Phyu Khant</h1>
+        <p class="hero-title">Full Stack, Front-End, and CMS Developer building practical web experiences for teams and customers.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="https://github.com/KyiPhyuKhant/kyiphyukhant.github.io/raw/main/img/Kyi_Phyu_Khant_Resume_Full_Stack_Web_Developer.pdf" target="_blank" rel="noopener">
+            <i class="fas fa-file-pdf"></i>
+            View Resume
+          </a>
+          <a class="button-secondary" href="expertise.html">
+            <i class="fas fa-layer-group"></i>
+            See Expertise
+          </a>
+        </div>
       </div>
-      
-      <!-- Name and Title with better spacing -->
-      <h1 class="text-6xl font-extrabold mb-3 tracking-tight drop-shadow-lg">
-        Kyi Phyu Khant
-      </h1>
-      <div class="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-        <p class="text-xl font-medium tracking-wide">Web | Front-End | CMS Developer</p>
+
+      <div class="hero-portrait" aria-label="Portrait of Kyi Phyu Khant">
+        <img src="img/KyiPhyuKhant.jpg" alt="Kyi Phyu Khant">
+        <div class="portrait-caption">
+          <span>Currently</span>
+          <strong>Full Stack Developer at Numinix</strong>
+        </div>
       </div>
-      
-      <!-- Enhanced Navigation -->
-      <nav class="mt-6 mb-4">
-        <ul class="flex justify-center gap-3 flex-wrap">
-          <li>
-            <a href="index.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-user mr-2"></i>About
-            </a>
-          </li>
-          <li>
-            <a href="expertise.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-code mr-2"></i>Expertise
-            </a>
-          </li>
-          <li>
-            <a href="contact.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-envelope mr-2"></i>Connect
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
 
-    <!-- Enhanced Wavy bottom effect -->
-    <!-- <svg width="100%" height="80" viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path fill="rgba(249, 250, 251, var(--tw-bg-opacity))" fill-opacity="1"
-        d="M0,128L30,160C60,192,120,256,180,256C240,256,300,192,360,160C420,128,480,128,540,138.7C600,149,660,171,720,192C780,213,840,235,900,224C960,213,1020,171,1080,160C1140,149,1200,171,1260,192C1320,213,1380,235,1410,245L1440,256L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320H0Z">
-      </path>
-    </svg> -->
+    <div class="hero-stats" aria-label="Professional highlights">
+      <div>
+        <strong>8+</strong>
+        <span>Years Experience</span>
+      </div>
+      <div>
+        <strong>CMS</strong>
+        <span>WordPress, Drupal, Custom Admins</span>
+      </div>
+      <div>
+        <strong>Stack</strong>
+        <span>HTML, CSS, JavaScript, PHP, MySQL</span>
+      </div>
+    </div>
   </header>
 
-
-
   <!-- About Me Section -->
-  <section id="about" class="relative py-10 bg-gray-50">
-
-    <div class="container mx-auto px-6 text-center relative z-10">
-      <h2 class="text-3xl font-bold mb-6">About Me</h2>
-      <p class="text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto mb-4">
+  <section id="about" class="home-section about-section">
+    <div class="section-heading">
+      <p class="eyebrow">About</p>
+      <h2>Developer with product sense and production habits.</h2>
+    </div>
+    <div class="about-grid">
+      <p>
         I'm Kyi, a Web Developer with over 8 years of experience and a Bachelor's degree in Information Technology. I’m
         passionate about web development and continuously learning about the latest technologies. In my spare time, I
         study more about web development, watch TV sitcoms, and explore around Bangkok.
       </p>
-      <div class="text-center">
-        <a href="https://github.com/KyiPhyuKhant/kyiphyukhant.github.io/raw/main/img/my-resume.pdf" target="_blank"
-          class="relative inline-block bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 hover:shadow-2xl overflow-hidden group">
-          <span class="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-          <span class="relative flex items-center justify-center gap-2">
-            <i class="fas fa-file-pdf"></i>
-            View My Resume
-            <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform duration-300"></i>
-          </span>
-        </a>
+      <div class="focus-list">
+        <div>
+          <i class="fas fa-cart-shopping"></i>
+          <span>E-commerce and CMS builds</span>
+        </div>
+        <div>
+          <i class="fas fa-mobile-screen-button"></i>
+          <span>Responsive front-end interfaces</span>
+        </div>
+        <div>
+          <i class="fas fa-database"></i>
+          <span>PHP and MySQL application work</span>
+        </div>
       </div>
     </div>
   </section>
-
 
   <!-- Job Experience Section -->
-  <section id="experience" class="py-10">
-    <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
-    <div class="container mx-auto px-4">
-      <div class="max-h-80 overflow-y-auto scrollable">
-        <ul class="space-y-4">
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">Full Stack Developer</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://numinix.com/" target="_blank" class="hover:underline">Numinix →</a>
-            </h4>
-            <p class="text-gray-600">Full-time · Feb 2025 - Present</p>
-          </li>
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">E-commerce WordPress Developer</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://tabacfree.com/" target="_blank" class="hover:underline">TabacFree →</a>
-            </h4>
-            <p class="text-gray-600">Full-time · Dec 2023 - Sep 2024</p>
-          </li>
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">Frontend Developer</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://www.unicomi.com/" target="_blank" class="hover:underline">UNICOMI →</a>
-            </h4>
-            <p class="text-gray-600">Full-time · Nov 2021 - Dec 2023</p>
-          </li>
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">Co-Founder & Operations Manager</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://www.facebook.com/TineYinnMay" target="_blank" class="hover:underline">Tine Yin May →</a>
-            </h4>
-            <p class="text-gray-600">Self-employed · May 2020 - Dec 2021</p>
-          </li>
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">Back End Developer</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://eramyanmar.com/" target="_blank" class="hover:underline">ERA Myanmar →</a>
-            </h4>
-            <p class="text-gray-600">Full-time · Dec 2019 - Oct 2021</p>
-          </li>
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">Senior Web Developer</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://eramyanmar.com/" target="_blank" class="hover:underline">ERA Myanmar →</a>
-            </h4>
-            <p class="text-gray-600">Full-time · Jun 2019 - Dec 2019</p>
-          </li>
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">PHP Web Developer</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://www.etiqa.com.sg/" target="_blank" class="hover:underline">Etiqa Insurance Singapore
-                →</a>
-            </h4>
-            <p class="text-gray-600">Contract · May 2017 - Nov 2017</p>
-          </li>
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">Content Management System Developer</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://www.nexlabs.co/" target="_blank" class="hover:underline">Nex Co., Ltd. →</a>
-            </h4>
-            <p class="text-gray-600">Full-time · Jan 2016 - Feb 2017</p>
-          </li>
-          <li class="p-5 border-l-4 border-blue-600 hover:bg-blue-50 transition duration-200">
-            <h4 class="text-sm font-semibold text-gray-800">Web Developer</h4>
-            <h4 class="text-xl font-semibold text-blue-600">
-              <a href="https://www.creative-webstudio.com/" target="_blank" class="hover:underline">CREATiVe Web Studio
-                →</a>
-            </h4>
-            <p class="text-gray-600">Full-time · Jun 2012 - Nov 2015</p>
-          </li>
-        </ul>
-      </div>
+  <section id="experience" class="home-section experience-section">
+    <div class="section-heading">
+      <p class="eyebrow">Experience</p>
+      <h2>Recent roles and long-term web development background.</h2>
+    </div>
+    <div class="experience-list">
+      <article class="experience-item featured">
+        <span class="role">Full Stack Developer</span>
+        <h3><a href="https://numinix.com/" target="_blank" rel="noopener">Numinix <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Full-time · Feb 2025 - Present</p>
+      </article>
+      <article class="experience-item">
+        <span class="role">E-commerce WordPress Developer</span>
+        <h3><a href="https://tabacfree.com/" target="_blank" rel="noopener">TabacFree <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Full-time · Dec 2023 - Sep 2024</p>
+      </article>
+      <article class="experience-item">
+        <span class="role">Frontend Developer</span>
+        <h3><a href="https://www.unicomi.com/" target="_blank" rel="noopener">UNICOMI <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Full-time · Nov 2021 - Dec 2023</p>
+      </article>
+      <article class="experience-item">
+        <span class="role">Co-Founder & Operations Manager</span>
+        <h3><a href="https://www.facebook.com/TineYinnMay" target="_blank" rel="noopener">Tine Yin May <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Self-employed · May 2020 - Dec 2021</p>
+      </article>
+      <article class="experience-item">
+        <span class="role">Back End Developer</span>
+        <h3><a href="https://eramyanmar.com/" target="_blank" rel="noopener">ERA Myanmar <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Full-time · Dec 2019 - Oct 2021</p>
+      </article>
+      <article class="experience-item">
+        <span class="role">Senior Web Developer</span>
+        <h3><a href="https://eramyanmar.com/" target="_blank" rel="noopener">ERA Myanmar <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Full-time · Jun 2019 - Dec 2019</p>
+      </article>
+      <article class="experience-item">
+        <span class="role">PHP Web Developer</span>
+        <h3><a href="https://www.etiqa.com.sg/" target="_blank" rel="noopener">Etiqa Insurance Singapore <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Contract · May 2017 - Nov 2017</p>
+      </article>
+      <article class="experience-item">
+        <span class="role">Content Management System Developer</span>
+        <h3><a href="https://www.nexlabs.co/" target="_blank" rel="noopener">Nex Co., Ltd. <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Full-time · Jan 2016 - Feb 2017</p>
+      </article>
+      <article class="experience-item">
+        <span class="role">Web Developer</span>
+        <h3><a href="https://www.creative-webstudio.com/" target="_blank" rel="noopener">CREATiVe Web Studio <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
+        <p>Full-time · Jun 2012 - Nov 2015</p>
+      </article>
     </div>
   </section>
 
-
-
-  <footer class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-5">
+  <footer class="home-footer">
     <div class="container mx-auto px-6 text-center">
       <p class="text-xs font-light mb-4">&copy; <span id="year">2024</span> Kyi Phyu Khant. All rights reserved.</p>
-      <p class="text-xs font-light">Visitor Count: <span id="visitor-counter">0</span>
-            <!--<img
-          src="https://hitwebcounter.com/counter/counter.php?page=17231895&style=0007&nbdigits=5&type=page&initCount=0"
-          title="Counter Widget" Alt="Visit counter For Websites" border="0" /></a></span></p> -->
-            <!-- hitwebcounter Code START -->
-
+      <p class="text-xs font-light">Visitor Count: <span id="visitor-counter">0</span></p>
     </div>
 
     <!-- Structured Data -->

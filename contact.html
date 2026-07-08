@@ -52,120 +52,71 @@
 </head>
 
 
-<body class="bg-gray-100 text-gray-800">
+<body class="home-page sub-page contact-page">
+  <div class="space-scene" aria-hidden="true">
+    <span class="star-layer star-layer-one"></span>
+    <span class="star-layer star-layer-two"></span>
+    <span class="orbit-ring orbit-one"></span>
+    <span class="orbit-ring orbit-two"></span>
+    <span class="cursor-light"></span>
+  </div>
 
-  <!-- Header Section -->
-   <header class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white pt-12">
-    <!-- Gradient background -->
-    <div class="container mx-auto px-6 text-center">
-      <div class="relative w-32 h-32 mx-auto my-4">
-        <div class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-red-500"></div>
-        <img src="img/KyiPhyuKhant.jpg" alt="Kyi Phyu Khant"
-          class="w-32 h-32 rounded-full border-4 border-white shadow-lg transition-transform duration-300 transform hover:scale-110 z-10">
-      </div>
-      
-      <!-- Name and Title with better spacing -->
-      <h1 class="text-6xl font-extrabold mb-3 tracking-tight drop-shadow-lg">
-        Kyi Phyu Khant
-      </h1>
-      <div class="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8">
-        <p class="text-xl font-medium tracking-wide">Web | Front-End | CMS Developer</p>
-      </div>
-      
-      <!-- Enhanced Navigation -->
-      <nav class="mt-6 mb-4">
-        <ul class="flex justify-center gap-3 flex-wrap">
-          <li>
-            <a href="index.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-user mr-2"></i>About
-            </a>
-          </li>
-          <li>
-            <a href="expertise.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-code mr-2"></i>Expertise
-            </a>
-          </li>
-          <li>
-            <a href="contact.html"
-              class="inline-block bg-white/90 text-white-600 hover:bg-white hover:text-pink-600 font-semibold rounded-full px-6 py-2.5 shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-300">
-              <i class="fas fa-envelope mr-2"></i>Connect
-            </a>
-          </li>
-        </ul>
-      </nav>
+  <header class="subpage-hero">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="brand-mark" href="index.html">KPK</a>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-user"></i>About</a></li>
+        <li><a href="expertise.html"><i class="fas fa-code"></i>Expertise</a></li>
+        <li><a class="active" href="contact.html"><i class="fas fa-envelope"></i>Connect</a></li>
+      </ul>
+    </nav>
+    <div class="subpage-copy">
+      <p class="eyebrow">Open channel</p>
+      <h1>Contact</h1>
+      <p>Reach out for project discussions, collaboration, or a quick web development conversation.</p>
     </div>
-
-    <!-- Enhanced Wavy bottom effect -->
-    <!-- <svg width="100%" height="80" viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path fill="rgba(249, 250, 251, var(--tw-bg-opacity))" fill-opacity="1"
-        d="M0,128L30,160C60,192,120,256,180,256C240,256,300,192,360,160C420,128,480,128,540,138.7C600,149,660,171,720,192C780,213,840,235,900,224C960,213,1020,171,1080,160C1140,149,1200,171,1260,192C1320,213,1380,235,1410,245L1440,256L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320H0Z">
-      </path>
-    </svg> -->
   </header>
 
-  <section id="contact" class="py-10 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
-      <div class="bg-gray-100 p-6 rounded-lg shadow-lg max-w-lg mx-auto text-center">
-        <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
-        <p class="mb-2"><strong><i class="fas fa-envelope mr-2"></i>Email:</strong> <a
-            href="mailto:kp.khantkhant@gmail.com" class="text-gray-800 hover:underline">kp.khantkhant@gmail.com</a></p>
-        <p class="mb-2"><strong><i class="fas fa-phone-alt mr-2"></i> Phone:</strong> <a href="tel:+660842720844"
-            class="text-gray-800 hover:underline">+66 0842720844</a></p>
-        <p class="text-gray-700">If you have any questions or want to discuss a project, feel free to reach out!</p>
+  <main>
+    <section id="contact" class="home-section contact-section">
+      <div class="contact-grid">
+        <article class="contact-card primary-contact">
+          <p class="eyebrow">Direct Signal</p>
+          <h2>Get in touch</h2>
+          <p>If you have any questions or want to discuss a project, feel free to reach out.</p>
+          <a href="mailto:kp.khantkhant@gmail.com"><i class="fas fa-envelope"></i>kp.khantkhant@gmail.com</a>
+          <a href="tel:+660842720844"><i class="fas fa-phone-alt"></i>+66 0842720844</a>
+        </article>
+
+        <article class="contact-card">
+          <p class="eyebrow">Location</p>
+          <h2>Tokyo orbit</h2>
+          <p>Available for remote collaboration and web development work across front-end, CMS, and e-commerce projects.</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- Social Media Section -->
-  <section id="social" class="bg-gray-50 py-10">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-4">Connect with Me</h2>
-      <div
-        class="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-4">
-        <a href="https://linkedin.com/in/kyiphyu-khant" target="_blank" rel="nofollow">
-          <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"
-            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
-        </a>
-        <a href="https://stackoverflow.com/users/9482702" target="_blank" rel="nofollow">
-          <img src="https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white"
-            alt="Stack Overflow" class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
-        </a>
-        <a href="https://github.com/KyiPhyuKhant" target="_blank" rel="nofollow">
-          <img src="https://img.shields.io/badge/GitHub%20Pages-100000?logo=github&logoColor=white" alt="GitHub Pages"
-            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
-        </a>
-        <a href="https://x.com/kyiphyukhant" target="_blank" rel="nofollow">
-          <img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=twitter&logoColor=white" alt="Twitter"
-            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
-        </a>
-        <a href="https://www.facebook.com/JeVeuxJusteEtreLibre" target="_blank" rel="nofollow">
-          <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?logo=facebook&logoColor=white" alt="Facebook"
-            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
-        </a>
-        <a href="https://www.instagram.com/kyi_phyu_khant/" target="_blank" rel="nofollow">
-          <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=instagram&logoColor=white" alt="Instagram"
-            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
-        </a>
-        <a href="https://www.youtube.com/@julykhant/" target="_blank" rel="nofollow">
-          <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=youtube&logoColor=white" alt="YouTube"
-            class="transition-transform duration-300 transform hover:scale-110 hover:shadow-lg">
-        </a>
+    <section id="social" class="home-section social-section">
+      <div class="section-heading">
+        <p class="eyebrow">Social Links</p>
+        <h2>Connect across the web.</h2>
       </div>
-      <p class="text-sm">Follow me on social media for updates!</p>
-    </div>
-  </section>
+      <div class="social-grid">
+        <a class="social-card" href="https://linkedin.com/in/kyiphyu-khant" target="_blank" rel="nofollow noopener"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+        <a class="social-card" href="https://stackoverflow.com/users/9482702" target="_blank" rel="nofollow noopener"><i class="fab fa-stack-overflow"></i><span>Stack Overflow</span></a>
+        <a class="social-card" href="https://github.com/KyiPhyuKhant" target="_blank" rel="nofollow noopener"><i class="fab fa-github"></i><span>GitHub</span></a>
+        <a class="social-card" href="https://x.com/kyiphyukhant" target="_blank" rel="nofollow noopener"><i class="fab fa-twitter"></i><span>X / Twitter</span></a>
+        <a class="social-card" href="https://www.facebook.com/JeVeuxJusteEtreLibre" target="_blank" rel="nofollow noopener"><i class="fab fa-facebook"></i><span>Facebook</span></a>
+        <a class="social-card" href="https://www.instagram.com/kyi_phyu_khant/" target="_blank" rel="nofollow noopener"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+        <a class="social-card" href="https://www.youtube.com/@julykhant/" target="_blank" rel="nofollow noopener"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+      </div>
+    </section>
+  </main>
 
-
-
-
-  <footer class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white py-5">
+  <footer class="home-footer">
     <div class="container mx-auto px-6 text-center">
       <p class="text-xs font-light mb-4">&copy; <span id="year">2024</span> Kyi Phyu Khant. All rights reserved.</p>
-      <p class="text-xs font-light">Visitor Count: <span id="visitor-counter">0</span>
+      <p class="text-xs font-light">Visitor Count: <span id="visitor-counter">0</span></p>
     </div>
 
     <!-- Structured Data -->
