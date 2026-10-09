@@ -1,453 +1,262 @@
-import { useEffect, useMemo, useState } from 'react';
-import portraitImage from '../img/KyiPhyuKhant.jpg';
+import { useEffect, useState } from 'react';
+import resumeUrl from '../img/Kyi_Phyu_Khant_Frontend_Engineer.pdf';
+import heroImage from '../img/workspace-hero.png';
+
+const contentWidth = 'mx-auto w-[calc(100%_-_40px)] max-w-[1120px] tablet:w-[calc(100%_-_64px)]';
+const sectionSpacing = 'py-9 tablet:py-12';
+const buttonBase = 'inline-flex items-center justify-center whitespace-nowrap rounded-[7px] border font-medium transition-colors duration-150';
+const primaryColors = 'border-transparent bg-brand text-white hover:bg-brand-hover';
+const buttonSize = 'min-h-12 gap-3 px-4 py-3 text-[13px] tablet:px-[22px] tablet:text-sm';
+const primaryButton = `${buttonBase} ${buttonSize} ${primaryColors}`;
 
 const navItems = [
-  { id: 'about', label: 'About', href: 'index.html', icon: 'fas fa-user' },
-  { id: 'expertise', label: 'Expertise', href: 'expertise.html', icon: 'fas fa-code' },
-  { id: 'contact', label: 'Connect', href: 'contact.html', icon: 'fas fa-envelope' },
-];
-
-const stats = [
-  ['8+', 'Years Experience'],
-  ['CMS', 'WordPress, Drupal, Custom Admins'],
-  ['Stack', 'HTML, CSS, JavaScript, PHP, MySQL'],
-];
-
-const focusItems = [
-  ['fas fa-cart-shopping', 'E-commerce and CMS builds'],
-  ['fas fa-mobile-screen-button', 'Responsive front-end interfaces'],
-  ['fas fa-database', 'PHP and MySQL application work'],
+  { id: 'about', label: 'About' },
+  { id: 'expertise', label: 'Skills' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 const experiences = [
-  ['Full Stack Developer', 'Numinix', 'https://numinix.com/', 'Full-time · Feb 2025 - Present', true],
-  ['E-commerce WordPress Developer', 'TabacFree', 'https://tabacfree.com/', 'Full-time · Dec 2023 - Sep 2024'],
-  ['Frontend Developer', 'UNICOMI', 'https://www.unicomi.com/', 'Full-time · Nov 2021 - Dec 2023'],
-  ['Co-Founder & Operations Manager', 'Tine Yin May', 'https://www.facebook.com/TineYinnMay', 'Self-employed · May 2020 - Dec 2021'],
-  ['Back End Developer', 'ERA Myanmar', 'https://eramyanmar.com/', 'Full-time · Dec 2019 - Oct 2021'],
-  ['Senior Web Developer', 'ERA Myanmar', 'https://eramyanmar.com/', 'Full-time · Jun 2019 - Dec 2019'],
-  ['PHP Web Developer', 'Etiqa Insurance Singapore', 'https://www.etiqa.com.sg/', 'Contract · May 2017 - Nov 2017'],
-  ['Content Management System Developer', 'Nex Co., Ltd.', 'https://www.nexlabs.co/', 'Full-time · Jan 2016 - Feb 2017'],
-  ['Web Developer', 'CREATiVe Web Studio', 'https://www.creative-webstudio.com/', 'Full-time · Jun 2012 - Nov 2015'],
+  ['Senior Full-Stack Web Developer', 'Numinix', 'https://numinix.com/', 'Jan 2025 - Present', 'Vancouver, Canada'],
+  ['Full Stack Developer', 'UrbanFlowers and Tabacfree', 'https://www.urbanflowers.co.th/', 'Dec 2023 - Sep 2024', 'Bangkok, Thailand'],
+  ['Web App Developer', 'Unicomi', 'https://www.unicomi.com/', 'Nov 2021 - Dec 2023', 'Singapore'],
+  ['Backend Developer', 'ERA Myanmar', 'https://eramyanmar.com/', 'Jun 2019 - Oct 2021', 'Yangon, Myanmar'],
+  ['Web App Developer', 'ETIQA', 'https://www.etiqa.com.sg/', 'May 2017 - Nov 2017', 'Singapore'],
+  ['Web Developer', 'NEX', 'https://www.nexlabs.co/', 'Jan 2016 - Feb 2017', 'Yangon, Myanmar'],
+  ['Web Developer', 'Creative Web Studio', 'https://www.creative-webstudio.com/', 'Jun 2012 - Nov 2015', 'Yangon, Myanmar'],
 ];
 
+const responsibilities = {
+  Numinix: [
+    'Develop and maintain responsive frontend features for production e-commerce applications using JavaScript, HTML5, CSS3, and PHP.',
+    'Implement interactive checkout flows, forms, and customer-facing UI features.',
+    'Improve frontend performance through lazy loading, image optimization, and asset minification.',
+    'Resolve frontend bugs, browser compatibility issues, and production problems.',
+    'Manage Git workflows, test changes in staging, and support production deployments with designers, QA, and stakeholders.',
+  ],
+  'UrbanFlowers and Tabacfree': [
+    'Managed and maintained WordPress and WooCommerce e-commerce websites.',
+    'Worked with marketing and design teams on content, promotions, and customer-facing improvements.',
+    'Integrated Zoho CRM to support customer and business data workflows.',
+    'Supported SEO, website performance, hosting, and DNS operations, and resolved e-commerce and UI issues.',
+  ],
+  Unicomi: [
+    'Developed responsive web interfaces and reusable React components with interactive UI features.',
+    'Integrated REST APIs and managed component state and user interactions.',
+    'Converted Figma and PSD designs into responsive, production-ready interfaces.',
+    'Tested across browsers and devices, resolved frontend issues, and supported ongoing application maintenance.',
+  ],
+  'ERA Myanmar': [
+    'Developed responsive web applications using React, Vue, and JavaScript.',
+    'Built and maintained CMS platforms, marketing websites, and microsites.',
+    'Developed PHP/Laravel and MySQL functionality and integrated interfaces with REST APIs and backend services.',
+    'Troubleshot UI and application issues and improved performance.',
+  ],
+  ETIQA: [
+    'Customized CMS frameworks and implemented website features and responsive interfaces.',
+    'Developed and maintained an internal PHP Staff Portal.',
+    'Participated in system integration and user acceptance testing (SIT/UAT), resolved reported issues, and supported application and database maintenance.',
+  ],
+  NEX: [
+    'Developed responsive WordPress and Drupal templates and frontend features using JavaScript, HTML5, CSS3, and Bootstrap.',
+    'Maintained client websites and resolved UI and technical issues.',
+    'Assisted with website design and content structure, collaborating with clients and project teams.',
+  ],
+  'Creative Web Studio': [
+    'Developed responsive websites and web applications with JavaScript, HTML5, CSS3, and Bootstrap.',
+    'Created wireframes and prototypes from client requirements.',
+    'Supported backend development and deployed systems, and identified and resolved website issues.',
+  ],
+};
+
 const skills = [
-  ['fas fa-code', 'HTML5 & CSS3'],
-  ['fas fa-code-branch', 'jQuery / JavaScript'],
-  ['fab fa-bootstrap', 'Bootstrap'],
-  ['fas fa-desktop', 'Responsive UI'],
-  ['fas fa-cogs', 'Drupal'],
-  ['fab fa-wordpress', 'WordPress'],
-  ['fas fa-shopping-cart', 'ZenCart'],
-  ['fab fa-jira', 'Jira'],
-  ['fas fa-code', 'PHP'],
-  ['fas fa-database', 'MySQL'],
-  ['fab fa-css3-alt', 'Tailwind CSS'],
-  ['fab fa-react', 'React'],
-  ['fas fa-paint-brush', 'Google Web Designer'],
-  ['fas fa-image', 'Adobe Photoshop'],
-  ['fas fa-file-alt', 'Microsoft Office'],
-  ['fab fa-git-alt', 'GIT'],
-  ['fas fa-code-branch', 'VS Code'],
-  ['fas fa-server', 'cPanel'],
-  ['fas fa-pencil-alt', 'Pencil'],
-  ['fab fa-google', 'Google Services'],
+  'HTML5 & CSS3', 'JavaScript', 'React', 'Vue.js', 'Sass / SCSS',
+  'Tailwind CSS', 'Bootstrap', 'Responsive UI',
+  'PHP', 'Laravel', 'MySQL', 'WordPress', 'Zen Cart', 'Drupal', 'Shopify',
+  'Git', 'Jira', 'Figma', 'Photoshop', 'Agile / Scrum', 'QA & Production Support',
 ];
 
 const socialLinks = [
   ['fab fa-linkedin', 'LinkedIn', 'https://linkedin.com/in/kyiphyu-khant'],
-  ['fab fa-stack-overflow', 'Stack Overflow', 'https://stackoverflow.com/users/9482702'],
   ['fab fa-github', 'GitHub', 'https://github.com/KyiPhyuKhant'],
-  ['fab fa-twitter', 'X / Twitter', 'https://x.com/kyiphyukhant'],
-  ['fab fa-facebook', 'Facebook', 'https://www.facebook.com/JeVeuxJusteEtreLibre'],
-  ['fab fa-instagram', 'Instagram', 'https://www.instagram.com/kyi_phyu_khant/'],
+  ['fab fa-stack-overflow', 'Stack Overflow', 'https://stackoverflow.com/users/9482702'],
   ['fab fa-youtube', 'YouTube', 'https://www.youtube.com/@julykhant/'],
 ];
 
-function getPageFromPath() {
-  const filename = window.location.pathname.split('/').pop();
-
-  if (filename === 'expertise.html') {
-    return 'expertise';
-  }
-
-  if (filename === 'contact.html') {
-    return 'contact';
-  }
-
-  return 'about';
+function Icon({ name, className = '' }) {
+  return <i className={`${name} ${className}`} aria-hidden="true" />;
 }
 
-function useVisitorCount() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const savedCount = Number.parseInt(localStorage.getItem('visitCount') || '0', 10);
-    const nextCount = Number.isNaN(savedCount) ? 1 : savedCount + 1;
-    localStorage.setItem('visitCount', String(nextCount));
-    setCount(nextCount);
-  }, []);
-
-  return count;
-}
-
-function useBackToTopVisibility() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100);
-    };
-
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return isVisible;
-}
-
-function useSpaceCursor() {
-  useEffect(() => {
-    const handlePointerMove = (event) => {
-      document.body.style.setProperty('--cursor-x', `${event.clientX}px`);
-      document.body.style.setProperty('--cursor-y', `${event.clientY}px`);
-    };
-
-    window.addEventListener('pointermove', handlePointerMove);
-
-    return () => window.removeEventListener('pointermove', handlePointerMove);
-  }, []);
-}
-
-function useBodyClass(page) {
-  useEffect(() => {
-    document.body.className = ['home-page', page !== 'about' ? 'sub-page' : '', `${page}-page`]
-      .filter(Boolean)
-      .join(' ');
-  }, [page]);
-}
-
-function handleTilt(event) {
-  const card = event.currentTarget;
-  const bounds = card.getBoundingClientRect();
-  const x = event.clientX - bounds.left;
-  const y = event.clientY - bounds.top;
-  const rotateX = ((y / bounds.height) - 0.5) * -8;
-  const rotateY = ((x / bounds.width) - 0.5) * 8;
-
-  card.style.setProperty('--tilt-x', `${rotateY.toFixed(2)}deg`);
-  card.style.setProperty('--tilt-y', `${rotateX.toFixed(2)}deg`);
-  card.style.setProperty('--card-x', `${x}px`);
-  card.style.setProperty('--card-y', `${y}px`);
-}
-
-function resetTilt(event) {
-  const card = event.currentTarget;
-  card.style.setProperty('--tilt-x', '0deg');
-  card.style.setProperty('--tilt-y', '0deg');
-  card.style.setProperty('--card-x', '50%');
-  card.style.setProperty('--card-y', '20%');
-}
-
-function TiltSurface({ as: Component = 'div', className, children, ...props }) {
+function DownloadCV({ secondary = false, compact = false, className = '' }) {
+  const variant = secondary
+    ? `${buttonBase} border-[#505a70] bg-white/85 text-ink hover:border-brand hover:bg-[#eef3ff]`
+    : `${buttonBase} ${primaryColors}`;
+  const size = compact
+    ? 'min-h-[38px] gap-[6px] px-2 py-2 text-xs tiny:gap-3 tiny:px-3 tablet:min-h-[42px] tablet:px-[18px] tablet:py-[9px] tablet:text-sm'
+    : buttonSize;
   return (
-    <Component
-      className={className}
-      onPointerMove={handleTilt}
-      onPointerLeave={resetTilt}
-      {...props}
-    >
-      {children}
-    </Component>
+    <a className={`${variant} ${size} ${className}`} href={resumeUrl} download="Kyi_Phyu_Khant_CV.pdf">
+      <Icon name="fas fa-download" className="text-[17px]" />
+      Download CV
+    </a>
   );
 }
 
-function SpaceScene() {
+function useSectionNavigation() {
+  const [activeSection, setActiveSection] = useState('about');
+  useEffect(() => {
+    const filename = window.location.pathname.split('/').pop();
+    const legacySection = { 'expertise.html': 'expertise', 'contact.html': 'contact' }[filename];
+    if (legacySection) window.history.replaceState(null, '', `./#${legacySection}`);
+    document.title = 'Kyi Phyu Khant | Frontend Engineer';
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target) target.scrollIntoView({ behavior: 'instant' });
+    const updateSection = () => {
+      const offset = document.querySelector('.navigation-bar').getBoundingClientRect().height + 40;
+      let current = 'about';
+      // Read the document order because Skills precedes Experience on the page.
+      document.querySelectorAll('main section[id]').forEach(section => {
+        if (section.getBoundingClientRect().top <= offset) current = section.id;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = 'contact';
+      setActiveSection(current);
+    };
+    updateSection();
+    window.addEventListener('scroll', updateSection, { passive: true });
+    window.addEventListener('resize', updateSection);
+    return () => {
+      window.removeEventListener('scroll', updateSection);
+      window.removeEventListener('resize', updateSection);
+    };
+  }, []);
+  return activeSection;
+}
+
+function Navigation({ activeSection }) {
   return (
-    <div className="space-scene" aria-hidden="true">
-      <span className="star-layer star-layer-one" />
-      <span className="star-layer star-layer-two" />
-      <span className="orbit-ring orbit-one" />
-      <span className="orbit-ring orbit-two" />
-      <span className="cursor-light" />
+    <div className="navigation-bar sticky top-0 z-20 border-b border-[#eef0f4] bg-white/97">
+      <nav className={`${contentWidth} flex min-h-[76px] flex-wrap items-center gap-x-4 gap-y-2 pt-3 pb-[10px] tablet:flex-nowrap tablet:gap-6 tablet:py-0 desktop:gap-9`} aria-label="Main navigation">
+        <a className="whitespace-nowrap text-[15px] font-semibold tiny:text-[17px] tablet:text-lg desktop:text-[21px]" href="#top">Kyi Phyu Khant</a>
+        <ul className="order-3 flex w-full justify-between gap-3 tablet:order-none tablet:ml-auto tablet:w-auto tablet:justify-start tablet:gap-[18px] desktop:gap-7">
+          {navItems.map(({ id, label }) => (
+            <li key={id}>
+              <a className={`block py-[6px] text-[13px] transition-colors duration-150 hover:text-brand tablet:py-3 tablet:text-sm ${activeSection === id ? 'text-brand' : 'text-ink'}`} href={`#${id}`} aria-current={activeSection === id ? 'location' : undefined}>{label}</a>
+            </li>
+          ))}
+        </ul>
+        <div className="ml-auto tablet:ml-0"><DownloadCV compact /></div>
+      </nav>
     </div>
   );
 }
 
-function Navigation({ activePage }) {
+function SectionHeading({ label, children }) {
   return (
-    <nav className="site-nav" aria-label="Main navigation">
-      <a className="brand-mark" href="index.html">KPK</a>
-      <ul>
-        {navItems.map((item) => (
-          <li key={item.id}>
-            <a className={activePage === item.id ? 'active' : undefined} href={item.href}>
-              <i className={item.icon} aria-hidden="true" />
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <div className="mb-[18px]">
+      <p className={`mb-[10px] text-xs font-medium uppercase after:mt-[5px] after:block after:h-[2px] after:w-8 after:bg-brand after:content-[''] ${label === 'Contact' ? 'text-brand' : 'text-[#59647d]'}`}>{label}</p>
+      <h2 className="text-[28px] leading-[1.25] font-semibold tablet:text-[32px]">{children}</h2>
+    </div>
   );
 }
 
-function HomePage({ activePage }) {
+function Hero() {
   return (
-    <>
-      <header className="home-hero">
-        <Navigation activePage={activePage} />
+    <header className="hero relative isolate bg-[#f7f7f7]" id="top">
+      <img src={heroImage} alt="" aria-hidden="true" className="absolute inset-0 -z-10 h-full w-full object-cover object-[63%_center] opacity-[0.18] tablet:object-center tablet:opacity-100" />
+      <div className={`${contentWidth} py-[52px] tablet:min-h-[430px] tablet:pt-[76px] tablet:pb-[78px] wide:py-[84px]`}>
+        <p className="mb-3 text-xs font-semibold text-[#59647d] uppercase">Web Development</p>
+        <h1 className="max-w-[620px] text-[34px] leading-[1.12] font-bold tiny:text-[40px] tablet:max-w-[500px] tablet:text-[46px] desktop:max-w-[620px] desktop:text-[52px]">Kyi Phyu Khant</h1>
+        <p className="mt-2 max-w-[340px] text-xl leading-[1.4] font-semibold text-muted tablet:max-w-[480px] tablet:text-[22px] desktop:max-w-[600px] desktop:text-2xl">Web Engineer</p>
+        <p className="mt-[10px] max-w-[330px] text-[15px] leading-[1.5] tablet:max-w-[430px] tablet:text-[17px]">Building clean, responsive, and user-friendly web applications.</p>
+        <div className="hero-actions mt-6 flex flex-wrap gap-3 tablet:gap-4">
+          <a className={`${primaryButton} max-tablet:px-4 max-tablet:text-[13px]`} href="#contact"><Icon name="far fa-envelope" className="text-[17px]" />Contact Me</a>
 
-        <div className="hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">Currently living in Tokyo</p>
-            <h1>Kyi Phyu Khant</h1>
-            <p className="hero-title">
-              Full Stack, Front-End, and CMS Developer building practical web experiences for teams and customers.
-            </p>
-            <div className="hero-actions">
-              <a className="button-primary" href="https://github.com/KyiPhyuKhant/kyiphyukhant.github.io/raw/main/img/Kyi_Phyu_Khant_Resume_Full_Stack_Web_Developer.pdf" target="_blank" rel="noopener noreferrer">
-                <i className="fas fa-file-pdf" aria-hidden="true" />
-                View Resume
-              </a>
-              <a className="button-secondary" href="expertise.html">
-                <i className="fas fa-layer-group" aria-hidden="true" />
-                See Expertise
-              </a>
-            </div>
-          </div>
-
-          <TiltSurface className="hero-portrait" aria-label="Portrait of Kyi Phyu Khant">
-            <img src={portraitImage} alt="Kyi Phyu Khant" />
-            <div className="portrait-caption">
-              <span>Currently</span>
-              <strong>Full Stack Developer at Numinix</strong>
-            </div>
-          </TiltSurface>
         </div>
-
-        <div className="hero-stats" aria-label="Professional highlights">
-          {stats.map(([value, label]) => (
-            <div key={label}>
-              <strong>{value}</strong>
-              <span>{label}</span>
-            </div>
-          ))}
-        </div>
-      </header>
-
-      <main>
-        <section id="about" className="home-section about-section">
-          <div className="section-heading">
-            <p className="eyebrow">About</p>
-            <h2>Developer with product sense and production habits.</h2>
-          </div>
-          <div className="about-grid">
-            <p>
-              I'm Kyi, a Web Developer with over 8 years of experience and a Bachelor's degree in Information
-              Technology. I am passionate about web development and continuously learning about the latest technologies.
-              In my spare time, I study more about web development, watch TV sitcoms, and explore around Bangkok.
-            </p>
-            <div className="focus-list">
-              {focusItems.map(([icon, label]) => (
-                <TiltSurface key={label}>
-                  <i className={icon} aria-hidden="true" />
-                  <span>{label}</span>
-                </TiltSurface>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="experience" className="home-section experience-section">
-          <div className="section-heading">
-            <p className="eyebrow">Experience</p>
-            <h2>Recent roles and long-term web development background.</h2>
-          </div>
-          <div className="experience-list">
-            {experiences.map(([role, company, href, detail, featured]) => (
-              <TiltSurface as="article" className={`experience-item${featured ? ' featured' : ''}`} key={`${role}-${company}`}>
-                <span className="role">{role}</span>
-                <h3>
-                  <a href={href} target="_blank" rel="noopener noreferrer">
-                    {company}
-                    <i className="fas fa-arrow-up-right-from-square" aria-hidden="true" />
-                  </a>
-                </h3>
-                <p>{detail}</p>
-              </TiltSurface>
-            ))}
-          </div>
-        </section>
-      </main>
-    </>
-  );
-}
-
-function SubpageHero({ activePage, eyebrow, title, description }) {
-  return (
-    <header className="subpage-hero">
-      <Navigation activePage={activePage} />
-      <div className="subpage-copy">
-        <p className="eyebrow">{eyebrow}</p>
-        <h1>{title}</h1>
-        <p>{description}</p>
       </div>
     </header>
   );
 }
 
-function ExpertisePage({ activePage }) {
-  return (
-    <>
-      <SubpageHero
-        activePage={activePage}
-        eyebrow="Mission toolkit"
-        title="Expertise"
-        description="Technologies and tools I use to design, build, maintain, and ship responsive web experiences."
-      />
-      <main>
-        <section id="skills" className="home-section skills-section">
-          <div className="section-heading">
-            <p className="eyebrow">Core Systems</p>
-            <h2>Front-end, CMS, e-commerce, and operations skills.</h2>
-          </div>
-          <div className="skills-grid">
-            {skills.map(([icon, label]) => (
-              <TiltSurface as="article" className="skill-card" key={label}>
-                <i className={icon} aria-hidden="true" />
-                <h3>{label}</h3>
-              </TiltSurface>
-            ))}
-          </div>
-        </section>
-      </main>
-    </>
-  );
+function About() {
+  return <section id="about" className={sectionSpacing}><div className={`${contentWidth} grid items-center gap-7 tablet:grid-cols-[1.2fr_1fr] tablet:gap-8 desktop:gap-[52px]`}>
+    <div><SectionHeading label="About">About Me</SectionHeading>
+      <p className="text-[15px] leading-[1.65] text-[#424b60] tablet:text-base">A web developer with 9+ years of experience building web applications and responsive interfaces. I work with JavaScript, React, Vue.js, and REST APIs to turn designs into reusable, production-ready UI. I enjoy solving complex issues, improving frontend performance, and collaborating with designers, QA engineers, clients, and international teams.</p>
+    </div>
+    <dl className="grid gap-[18px] border-t border-line pt-6 tablet:gap-5 tablet:border-t-0 tablet:border-l tablet:pt-0 tablet:pl-7 desktop:pl-[42px] [&>div]:grid [&>div]:grid-cols-[28px_1fr] [&>div]:gap-x-5 [&_i]:row-span-2 [&_i]:self-center [&_i]:text-center [&_i]:text-[22px] [&_dt]:text-sm [&_dt]:font-medium [&_dd]:text-[13px] [&_dd]:text-muted">
+      <div><Icon name="fas fa-map-marker-alt" /><dt>Tokyo, Japan</dt><dd>Currently based in Tokyo</dd></div>
+      <div><Icon name="fas fa-briefcase" /><dt>Senior Full-Stack Web Developer</dt><dd>Currently at Numinix</dd></div>
+      <div><Icon name="fas fa-laptop-code" /><dt>Frontend, CMS & E-commerce</dt><dd>Responsive web experiences</dd></div>
+      <div><Icon name="fas fa-graduation-cap" /><dt>Information Technology</dt><dd>Bachelor's degree</dd></div>
+    </dl>
+  </div></section>;
 }
 
-function ContactPage({ activePage }) {
-  return (
-    <>
-      <SubpageHero
-        activePage={activePage}
-        eyebrow="Open channel"
-        title="Contact"
-        description="Reach out for project discussions, collaboration, or a quick web development conversation."
-      />
-      <main>
-        <section id="contact" className="home-section contact-section">
-          <div className="contact-grid">
-            <TiltSurface as="article" className="contact-card primary-contact">
-              <p className="eyebrow">Direct Signal</p>
-              <h2>Get in touch</h2>
-              <p>If you have any questions or want to discuss a project, feel free to reach out.</p>
-              <a href="mailto:kp.khantkhant@gmail.com">
-                <i className="fas fa-envelope" aria-hidden="true" />
-                kp.khantkhant@gmail.com
-              </a>
-              <a href="tel:+660842720844">
-                <i className="fas fa-phone-alt" aria-hidden="true" />
-                +66 0842720844
-              </a>
-            </TiltSurface>
-
-            <TiltSurface as="article" className="contact-card">
-              <p className="eyebrow">Location</p>
-              <h2>Tokyo orbit</h2>
-              <p>Available for remote collaboration and web development work across front-end, CMS, and e-commerce projects.</p>
-            </TiltSurface>
-          </div>
-        </section>
-
-        <section id="social" className="home-section social-section">
-          <div className="section-heading">
-            <p className="eyebrow">Social Links</p>
-            <h2>Connect across the web.</h2>
-          </div>
-          <div className="social-grid">
-            {socialLinks.map(([icon, label, href]) => (
-              <TiltSurface as="a" className="social-card" href={href} target="_blank" rel="nofollow noopener noreferrer" key={label}>
-                <i className={icon} aria-hidden="true" />
-                <span>{label}</span>
-              </TiltSurface>
-            ))}
-          </div>
-        </section>
-      </main>
-    </>
-  );
+function Skills() {
+  return <section id="expertise" className="bg-[#fafbfd] py-9 tablet:py-[38px]"><div className={contentWidth}>
+    <SectionHeading label="Skills">Technical Skills</SectionHeading>
+    <ul className="skill-tags flex flex-wrap gap-[10px] tablet:gap-x-4 tablet:gap-y-3">{skills.map(skill => <li className="rounded-full bg-[#edf2f8] px-4 py-2 text-center text-xs tablet:px-6 tablet:py-[10px] tablet:text-[13px]" key={skill}>{skill}</li>)}</ul>
+  </div></section>;
 }
 
-function Footer({ visitorCount }) {
-  const year = useMemo(() => new Date().getFullYear(), []);
-
-  return (
-    <footer className="home-footer">
-      <div className="container mx-auto px-6 text-center">
-        <p className="text-xs font-light mb-4">&copy; {year} Kyi Phyu Khant. All rights reserved.</p>
-        <p className="text-xs font-light">Visitor Count: <span>{visitorCount}</span></p>
+function Experience() {
+  return <section id="experience" className={sectionSpacing}><div className={contentWidth}>
+    <SectionHeading label="Experience">Work Experience</SectionHeading>
+    <ol className="mt-6 pl-[10px]">{experiences.map(([role, company, href, dates, type]) => <li className="timeline-item relative grid gap-2 border-l border-[#8aafff] pb-[26px] pl-[26px] before:absolute before:top-[5px] before:-left-[7px] before:size-[13px] before:rounded-full before:bg-brand before:content-[''] last:pb-0 tablet:grid-cols-[220px_1fr] tablet:gap-5 tablet:pb-[30px] tablet:pl-10 desktop:grid-cols-[250px_1fr]" key={`${role}-${company}`}>
+      <div><p className="text-[13px] font-semibold tablet:text-sm">{dates}</p><span className="text-[13px] text-muted">{type}</span></div>
+      <div className="min-w-0">
+        <h3 className="text-sm leading-[1.45] font-semibold tablet:text-[15px]">{role}</h3>
+        <a className="text-sm text-[#4a5468] hover:text-brand" href={href} target="_blank" rel="noopener noreferrer">{company}<Icon name="fas fa-arrow-up-right-from-square" className="ml-2 text-[10px]" /></a>
+        {responsibilities[company] && (
+          <ul className="mt-2 list-disc space-y-1 pl-[18px] text-[13px] leading-[1.65] text-[#4a5468] tablet:text-sm">
+            {responsibilities[company].map(task => <li key={task}>{task}</li>)}
+          </ul>
+        )}
       </div>
-    </footer>
-  );
+    </li>)}</ol>
+  </div></section>;
+}
+
+function Contact() {
+  return <section id="contact" className="bg-[#f2f7fd] py-9 tablet:py-[38px]"><div className={`${contentWidth} grid items-center gap-6 tablet:grid-cols-2 tablet:gap-8 desktop:grid-cols-[1.1fr_1fr_auto]`}>
+    <div><SectionHeading label="Contact">Let's Work Together</SectionHeading><p className="max-w-[390px] text-sm text-muted">Feel free to contact me about web development projects, collaboration, or new opportunities.</p></div>
+    <div className="grid gap-[14px] tablet:border-l tablet:border-line tablet:pl-[30px] [&>a]:flex [&>a]:items-center [&>a]:gap-[14px] [&>a]:text-xs [&>a]:text-[#4a5468] [&>a:hover]:text-brand [&_i]:w-[22px] [&_i]:shrink-0 [&_i]:basis-[22px] [&_i]:text-center [&_i]:text-xl [&_i]:text-ink [&_span]:wrap-anywhere">
+      <a href="mailto:kp.khantkhant@gmail.com"><Icon name="far fa-envelope" /><span>kp.khantkhant@gmail.com</span></a>
+      <a href="https://linkedin.com/in/kyiphyu-khant" target="_blank" rel="noopener noreferrer"><Icon name="fab fa-linkedin" /><span>linkedin.com/in/kyiphyu-khant</span></a>
+      <a href="https://github.com/KyiPhyuKhant" target="_blank" rel="noopener noreferrer"><Icon name="fab fa-github" /><span>github.com/KyiPhyuKhant</span></a>
+      </div>
+
+  </div></section>;
+}
+
+function Footer() {
+  return <footer className="border-t border-[#e9edf4] bg-white py-[22px]"><div className={`${contentWidth} flex flex-col items-start justify-between gap-3 tablet:flex-row tablet:items-center tablet:gap-5`}>
+    <p className="text-xs text-muted">&copy; {new Date().getFullYear()} Kyi Phyu Khant</p>
+    <div className="flex gap-4">{socialLinks.map(([icon, label, href]) => <a className="text-lg text-[#626d80] hover:text-brand" href={href} key={label} aria-label={label} title={label} target="_blank" rel="noopener noreferrer"><Icon name={icon} /></a>)}</div>
+  </div></footer>;
 }
 
 function BackToTop() {
-  const isVisible = useBackToTopVisibility();
-
-  return (
-    <button
-      type="button"
-      id="backToTop"
-      className={`fixed bottom-10 right-10 bg-blue-600 text-white rounded-full p-3 shadow-lg transition-transform transform hover:scale-105${isVisible ? '' : ' hidden'}`}
-      aria-label="Back to top"
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-    >
-      ↑
-    </button>
-  );
-}
-
-function StructuredData() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Kyi Phyu Khant',
-    jobTitle: 'Web Developer',
-    url: 'https://kyiphyukhant.github.io/',
-    sameAs: [
-      'https://x.com/kyiphyukhant',
-      'https://www.instagram.com/kyi_phyu_khant/',
-      'https://www.linkedin.com/in/kyiphyu-khant',
-    ],
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const update = () => setVisible(window.scrollY > 400);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, []);
+  return visible && <a className="fixed right-[22px] bottom-[22px] z-10 flex size-10 items-center justify-center rounded-[7px] bg-brand text-white shadow-[0_3px_12px_#1c61ff25]" href="#top" aria-label="Back to top" title="Back to top"><Icon name="fas fa-arrow-up" /></a>;
 }
 
 export default function App() {
-  const page = getPageFromPath();
-  const visitorCount = useVisitorCount();
-
-  useBodyClass(page);
-  useSpaceCursor();
-
-  return (
-    <>
-      <SpaceScene />
-      {page === 'about' && <HomePage activePage={page} />}
-      {page === 'expertise' && <ExpertisePage activePage={page} />}
-      {page === 'contact' && <ContactPage activePage={page} />}
-      <Footer visitorCount={visitorCount} />
-      <StructuredData />
-      <BackToTop />
-    </>
-  );
+  const activeSection = useSectionNavigation();
+  const schema = {
+    '@context': 'https://schema.org', '@type': 'Person', name: 'Kyi Phyu Khant',
+    jobTitle: 'Frontend Engineer', url: 'https://kyiphyukhant.github.io/',
+    sameAs: socialLinks.map(([, , href]) => href),
+  };
+  return <>
+    <Navigation activeSection={activeSection} /><Hero />
+    <main><About /><Skills /><Experience /><Contact /></main>
+    <Footer /><BackToTop />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+  </>;
 }
