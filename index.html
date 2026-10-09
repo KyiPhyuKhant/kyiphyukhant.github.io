@@ -1,241 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyi</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyi's Portfolio | Web Developer</title>
+    <meta
+      name="description"
+      content="Kyi Phyu Khant's portfolio showcasing over 8 years of experience as a web developer with skills in HTML5, CSS3, JavaScript, PHP, MySQL, WordPress, and more."
+    />
+    <meta
+      name="keywords"
+      content="Kyi Phyu Khant, web developer, portfolio, HTML5, CSS3, JavaScript, PHP, WordPress, MySQL, responsive design, front-end developer, back-end developer, SEO"
+    />
+    <meta name="author" content="Kyi Phyu Khant" />
 
-  <!-- SEO Meta Tags -->
-  <meta name="description"
-    content="Kyi Phyu Khant's portfolio showcasing over 8 years of experience as a web developer with skills in HTML5, CSS3, JavaScript, PHP, MySQL, WordPress, and more. Explore Kyi's projects, skills, and expertise in custom web solutions.">
-  <meta name="keywords"
-    content="Kyi Phyu Khant, web developer, portfolio, HTML5, CSS3, JavaScript, PHP, WordPress, MySQL, responsive design, front-end developer, back-end developer, SEO">
-  <meta name="author" content="Kyi Phyu Khant">
+    <meta property="og:title" content="Kyi's Portfolio | Web Developer" />
+    <meta
+      property="og:description"
+      content="Explore Kyi Phyu Khant's web developer portfolio, highlighting expertise in front-end and back-end development, custom web solutions, and responsive design."
+    />
+    <meta property="og:image" content="img/image.png" />
+    <meta property="og:url" content="https://kyiphyukhant.github.io/" />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Kyi's Portfolio | Web Developer">
-  <meta property="og:description"
-    content="Explore Kyi Phyu Khant's web developer portfolio, highlighting expertise in front-end and back-end development, custom web solutions, and responsive design.">
-  <meta property="og:image" content="img/image.png">
-  <meta property="og:url" content="https://kyiphyukhant.github.io/"> <!-- Update to your portfolio URL -->
-  <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kyi's Portfolio | Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Showcasing over 8 years of experience in web development, Kyi's portfolio covers projects, skills, and a dedication to custom web solutions."
+    />
+    <meta name="twitter:image" content="img/image.png" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kyi's Portfolio | Web Developer">
-  <meta name="twitter:description"
-    content="Showcasing over 8 years of experience in web development, Kyi's portfolio covers projects, skills, and a dedication to custom web solutions.">
-  <meta name="twitter:image" content="img/image.png">
-
-  <!-- External CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <!-- Local CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
-
-  <!-- Import custom JavaScript with defer -->
-  <script src="custom.js" defer></script>
-</head>
-
-
-<body class="home-page">
-  <div class="space-scene" aria-hidden="true">
-    <span class="star-layer star-layer-one"></span>
-    <span class="star-layer star-layer-two"></span>
-    <span class="orbit-ring orbit-one"></span>
-    <span class="orbit-ring orbit-two"></span>
-    <span class="cursor-light"></span>
-  </div>
-
-  <!-- Header Section -->
-  <header class="home-hero">
-    <nav class="site-nav" aria-label="Main navigation">
-      <a class="brand-mark" href="index.html">KPK</a>
-      <ul>
-        <li><a class="active" href="index.html"><i class="fas fa-user"></i>About</a></li>
-        <li><a href="expertise.html"><i class="fas fa-code"></i>Expertise</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i>Connect</a></li>
-      </ul>
-    </nav>
-
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Currently living in Tokyo</p>
-        <h1>Kyi Phyu Khant</h1>
-        <p class="hero-title">Full Stack, Front-End, and CMS Developer building practical web experiences for teams and customers.</p>
-        <div class="hero-actions">
-          <a class="button-primary" href="https://github.com/KyiPhyuKhant/kyiphyukhant.github.io/raw/main/img/Kyi_Phyu_Khant_Resume_Full_Stack_Web_Developer.pdf" target="_blank" rel="noopener">
-            <i class="fas fa-file-pdf"></i>
-            View Resume
-          </a>
-          <a class="button-secondary" href="expertise.html">
-            <i class="fas fa-layer-group"></i>
-            See Expertise
-          </a>
-        </div>
-      </div>
-
-      <div class="hero-portrait" aria-label="Portrait of Kyi Phyu Khant">
-        <img src="img/KyiPhyuKhant.jpg" alt="Kyi Phyu Khant">
-        <div class="portrait-caption">
-          <span>Currently</span>
-          <strong>Full Stack Developer at Numinix</strong>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-stats" aria-label="Professional highlights">
-      <div>
-        <strong>8+</strong>
-        <span>Years Experience</span>
-      </div>
-      <div>
-        <strong>CMS</strong>
-        <span>WordPress, Drupal, Custom Admins</span>
-      </div>
-      <div>
-        <strong>Stack</strong>
-        <span>HTML, CSS, JavaScript, PHP, MySQL</span>
-      </div>
-    </div>
-  </header>
-
-  <!-- About Me Section -->
-  <section id="about" class="home-section about-section">
-    <div class="section-heading">
-      <p class="eyebrow">About</p>
-      <h2>Developer with product sense and production habits.</h2>
-    </div>
-    <div class="about-grid">
-      <p>
-        I'm Kyi, a Web Developer with over 8 years of experience and a Bachelor's degree in Information Technology. I’m
-        passionate about web development and continuously learning about the latest technologies. In my spare time, I
-        study more about web development, watch TV sitcoms, and explore around Bangkok.
-      </p>
-      <div class="focus-list">
-        <div>
-          <i class="fas fa-cart-shopping"></i>
-          <span>E-commerce and CMS builds</span>
-        </div>
-        <div>
-          <i class="fas fa-mobile-screen-button"></i>
-          <span>Responsive front-end interfaces</span>
-        </div>
-        <div>
-          <i class="fas fa-database"></i>
-          <span>PHP and MySQL application work</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Job Experience Section -->
-  <section id="experience" class="home-section experience-section">
-    <div class="section-heading">
-      <p class="eyebrow">Experience</p>
-      <h2>Recent roles and long-term web development background.</h2>
-    </div>
-    <div class="experience-list">
-      <article class="experience-item featured">
-        <span class="role">Full Stack Developer</span>
-        <h3><a href="https://numinix.com/" target="_blank" rel="noopener">Numinix <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Full-time · Feb 2025 - Present</p>
-      </article>
-      <article class="experience-item">
-        <span class="role">E-commerce WordPress Developer</span>
-        <h3><a href="https://tabacfree.com/" target="_blank" rel="noopener">TabacFree <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Full-time · Dec 2023 - Sep 2024</p>
-      </article>
-      <article class="experience-item">
-        <span class="role">Frontend Developer</span>
-        <h3><a href="https://www.unicomi.com/" target="_blank" rel="noopener">UNICOMI <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Full-time · Nov 2021 - Dec 2023</p>
-      </article>
-      <article class="experience-item">
-        <span class="role">Co-Founder & Operations Manager</span>
-        <h3><a href="https://www.facebook.com/TineYinnMay" target="_blank" rel="noopener">Tine Yin May <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Self-employed · May 2020 - Dec 2021</p>
-      </article>
-      <article class="experience-item">
-        <span class="role">Back End Developer</span>
-        <h3><a href="https://eramyanmar.com/" target="_blank" rel="noopener">ERA Myanmar <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Full-time · Dec 2019 - Oct 2021</p>
-      </article>
-      <article class="experience-item">
-        <span class="role">Senior Web Developer</span>
-        <h3><a href="https://eramyanmar.com/" target="_blank" rel="noopener">ERA Myanmar <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Full-time · Jun 2019 - Dec 2019</p>
-      </article>
-      <article class="experience-item">
-        <span class="role">PHP Web Developer</span>
-        <h3><a href="https://www.etiqa.com.sg/" target="_blank" rel="noopener">Etiqa Insurance Singapore <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Contract · May 2017 - Nov 2017</p>
-      </article>
-      <article class="experience-item">
-        <span class="role">Content Management System Developer</span>
-        <h3><a href="https://www.nexlabs.co/" target="_blank" rel="noopener">Nex Co., Ltd. <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Full-time · Jan 2016 - Feb 2017</p>
-      </article>
-      <article class="experience-item">
-        <span class="role">Web Developer</span>
-        <h3><a href="https://www.creative-webstudio.com/" target="_blank" rel="noopener">CREATiVe Web Studio <i class="fas fa-arrow-up-right-from-square"></i></a></h3>
-        <p>Full-time · Jun 2012 - Nov 2015</p>
-      </article>
-    </div>
-  </section>
-
-  <footer class="home-footer">
-    <div class="container mx-auto px-6 text-center">
-      <p class="text-xs font-light mb-4">&copy; <span id="year">2024</span> Kyi Phyu Khant. All rights reserved.</p>
-      <p class="text-xs font-light">Visitor Count: <span id="visitor-counter">0</span></p>
-    </div>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kyi Phyu Khant",
-        "jobTitle": "Web Developer",
-        "url": "https://kyiphyukhant.github.io/",
-        "sameAs": [
-          "https://x.com/kyiphyukhant",
-          "https://www.instagram.com/kyi_phyu_khant/",
-          "https://www.linkedin.com/in/kyiphyu-khant"
-        ]
-      }
-    </script>
-
-    <!-- Update Year Automatically -->
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </footer>
-
-
-
-
-
-
-  <button id="backToTop"
-    class="fixed bottom-10 right-10 bg-blue-600 text-white rounded-full p-3 shadow-lg transition-transform transform hover:scale-105 hidden">
-    ↑
-  </button>
-
-</body>
-
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

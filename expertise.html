@@ -1,150 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expertise | Kyi's Portfolio</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyi's Portfolio | Web Developer</title>
+    <meta
+      name="description"
+      content="Technologies and tools Kyi Phyu Khant uses to design, build, maintain, and ship responsive web experiences."
+    />
+    <meta name="author" content="Kyi Phyu Khant" />
 
-  <!-- SEO Meta Tags -->
-  <meta name="description"
-    content="Kyi Phyu Khant's portfolio showcasing over 8 years of experience as a web developer with skills in HTML5, CSS3, JavaScript, PHP, MySQL, WordPress, and more. Explore Kyi's projects, skills, and expertise in custom web solutions.">
-  <meta name="keywords"
-    content="Kyi Phyu Khant, web developer, portfolio, HTML5, CSS3, JavaScript, PHP, WordPress, MySQL, responsive design, front-end developer, back-end developer, SEO">
-  <meta name="author" content="Kyi Phyu Khant">
+    <meta property="og:title" content="Expertise | Kyi's Portfolio" />
+    <meta property="og:description" content="Explore Kyi Phyu Khant's front-end, CMS, e-commerce, and operations skills." />
+    <meta property="og:image" content="img/image.png" />
+    <meta property="og:url" content="https://kyiphyukhant.github.io/expertise.html" />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Kyi's Portfolio | Web Developer">
-  <meta property="og:description"
-    content="Explore Kyi Phyu Khant's web developer portfolio, highlighting expertise in front-end and back-end development, custom web solutions, and responsive design.">
-  <meta property="og:image" content="img/image.png">
-  <meta property="og:url" content="https://kyiphyukhant.github.io/"> <!-- Update to your portfolio URL -->
-  <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Expertise | Kyi's Portfolio" />
+    <meta name="twitter:description" content="Front-end, CMS, e-commerce, and operations skills." />
+    <meta name="twitter:image" content="img/image.png" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kyi's Portfolio | Web Developer">
-  <meta name="twitter:description"
-    content="Showcasing over 8 years of experience in web development, Kyi's portfolio covers projects, skills, and a dedication to custom web solutions.">
-  <meta name="twitter:image" content="img/image.png">
-
-  <!-- External CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <!-- Local CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-  </style>
-
-  <!-- Import custom JavaScript with defer -->
-  <script src="custom.js" defer></script>
-</head>
-
-
-<body class="home-page sub-page expertise-page">
-  <div class="space-scene" aria-hidden="true">
-    <span class="star-layer star-layer-one"></span>
-    <span class="star-layer star-layer-two"></span>
-    <span class="orbit-ring orbit-one"></span>
-    <span class="orbit-ring orbit-two"></span>
-    <span class="cursor-light"></span>
-  </div>
-
-  <header class="subpage-hero">
-    <nav class="site-nav" aria-label="Main navigation">
-      <a class="brand-mark" href="index.html">KPK</a>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-user"></i>About</a></li>
-        <li><a class="active" href="expertise.html"><i class="fas fa-code"></i>Expertise</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i>Connect</a></li>
-      </ul>
-    </nav>
-    <div class="subpage-copy">
-      <p class="eyebrow">Mission toolkit</p>
-      <h1>Expertise</h1>
-      <p>Technologies and tools I use to design, build, maintain, and ship responsive web experiences.</p>
-    </div>
-  </header>
-
-  <main>
-    <section id="skills" class="home-section skills-section">
-      <div class="section-heading">
-        <p class="eyebrow">Core Systems</p>
-        <h2>Front-end, CMS, e-commerce, and operations skills.</h2>
-      </div>
-      <div class="skills-grid">
-        <article class="skill-card"><i class="fas fa-code"></i><h3>HTML5 & CSS3</h3></article>
-        <article class="skill-card"><i class="fas fa-code-branch"></i><h3>jQuery / JavaScript</h3></article>
-        <article class="skill-card"><i class="fab fa-bootstrap"></i><h3>Bootstrap</h3></article>
-        <article class="skill-card"><i class="fas fa-desktop"></i><h3>Responsive UI</h3></article>
-        <article class="skill-card"><i class="fas fa-cogs"></i><h3>Drupal</h3></article>
-        <article class="skill-card"><i class="fab fa-wordpress"></i><h3>WordPress</h3></article>
-        <article class="skill-card"><i class="fas fa-shopping-cart"></i><h3>ZenCart</h3></article>
-        <article class="skill-card"><i class="fab fa-jira"></i><h3>Jira</h3></article>
-        <article class="skill-card"><i class="fas fa-code"></i><h3>PHP</h3></article>
-        <article class="skill-card"><i class="fas fa-database"></i><h3>MySQL</h3></article>
-        <article class="skill-card"><i class="fab fa-css3-alt"></i><h3>Tailwind CSS</h3></article>
-        <article class="skill-card"><i class="fab fa-react"></i><h3>React</h3></article>
-        <article class="skill-card"><i class="fas fa-paint-brush"></i><h3>Google Web Designer</h3></article>
-        <article class="skill-card"><i class="fas fa-image"></i><h3>Adobe Photoshop</h3></article>
-        <article class="skill-card"><i class="fas fa-file-alt"></i><h3>Microsoft Office</h3></article>
-        <article class="skill-card"><i class="fab fa-git-alt"></i><h3>GIT</h3></article>
-        <article class="skill-card"><i class="fas fa-code-branch"></i><h3>VS Code</h3></article>
-        <article class="skill-card"><i class="fas fa-server"></i><h3>cPanel</h3></article>
-        <article class="skill-card"><i class="fas fa-pencil-alt"></i><h3>Pencil</h3></article>
-        <article class="skill-card"><i class="fab fa-google"></i><h3>Google Services</h3></article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="home-footer">
-    <div class="container mx-auto px-6 text-center">
-      <p class="text-xs font-light mb-4">&copy; <span id="year">2024</span> Kyi Phyu Khant. All rights reserved.</p>
-      <p class="text-xs font-light">Visitor Count: <span id="visitor-counter">0</span></p>
-    </div>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Kyi Phyu Khant",
-        "jobTitle": "Web Developer",
-        "url": "https://kyiphyukhant.github.io/",
-        "sameAs": [
-          "https://x.com/kyiphyukhant",
-          "https://www.instagram.com/kyi_phyu_khant/",
-          "https://www.linkedin.com/in/kyiphyu-khant"
-        ]
-      }
-    </script>
-
-    <!-- Update Year Automatically -->
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </footer>
-
-
-
-
-
-  <button id="backToTop"
-    class="fixed bottom-10 right-10 bg-blue-600 text-white rounded-full p-3 shadow-lg transition-transform transform hover:scale-105 hidden">
-    ↑
-  </button>
-
-</body>
-
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
